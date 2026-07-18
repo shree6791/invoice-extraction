@@ -1,0 +1,255 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.6067166704263479,
+        0.1804083888321839,
+        0.6911374915407175,
+        0.1894987340058986
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "FE04-000444"
+    },
+    {
+      "bbox": [
+        0.6261983983758178,
+        0.19928833650066824,
+        0.6911374915407175,
+        0.21117571095860285
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "APR07/99"
+    },
+    {
+      "bbox": [
+        0.38387096774193546,
+        0.33913980071166355,
+        0.42581491089555606,
+        0.35015197568389056
+      ],
+      "fieldtype": "order_id",
+      "page": 0,
+      "text": "90101"
+    },
+    {
+      "bbox": [
+        0.317273855177081,
+        0.09370048102136681,
+        0.6846435822242275,
+        0.12167077386356587
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Bozell Worldwide, Inc."
+    },
+    {
+      "bbox": [
+        0.317273855177081,
+        0.09579825298453176,
+        0.688354387547936,
+        0.1475432947426
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "Bozell Worldwide, Inc.\n40 WEST 23RD STREET\nNEW YORK, NY 10010-5201"
+    },
+    {
+      "bbox": [
+        0.13637209564628922,
+        0.6249961850230819,
+        0.3070691405368825,
+        0.6368835594810164
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "BOZELL WORLDWIDE, INC."
+    },
+    {
+      "bbox": [
+        0.13637209564628922,
+        0.6256954423441369,
+        0.3098522445296639,
+        0.6564627644705557
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "BOZELL WORLDWIDE, INC.\nP.O. BOX 198261\nATLANTA, GA 30384-8261"
+    },
+    {
+      "bbox": [
+        0.22450372208436728,
+        0.2643192673587811,
+        0.4545736521542974,
+        0.2866955016325403
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "LORILLARD TOBACCO COMPANY INC.\nYOUTH SMOKING PREVENTION PRGM."
+    },
+    {
+      "bbox": [
+        0.22450372208436728,
+        0.2643192673587811,
+        0.4573567561470788,
+        0.3174628237589593
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "LORILLARD TOBACCO COMPANY INC.\nYOUTH SMOKING PREVENTION PRGM.\n714 GREEN VALLEY RD, BOX 10529\nGREENSBORO, NC 27404\nATTN: VICTOR LYNDSLEY"
+    },
+    {
+      "bbox": [
+        0.6020781637717122,
+        0.5831806057598503,
+        0.6104274757500564,
+        0.5929702082546199
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.6002227611098578,
+        0.5817820911177403,
+        0.6874266862170089,
+        0.5943687228967299
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "$113,900.00"
+    },
+    {
+      "bbox": [
+        0.6002227611098578,
+        0.5817820911177403,
+        0.688354387547936,
+        0.5929702082546199
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "$113,900.00"
+    },
+    {
+      "bbox": [
+        0.18925107150913603,
+        0.6978588064128664,
+        0.3293339724791338,
+        0.7097461808708009
+      ],
+      "fieldtype": "payment_terms",
+      "page": 0,
+      "text": "NET DUE IN 20 DAYS"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.18548387096774194,
+        0.43343465045592705,
+        0.4879032258064516,
+        0.443161094224924
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "SERVICE FEE EOR THE MONTH OF APRIL 1999"
+    },
+    {
+      "bbox": [
+        0.6,
+        0.43343465045592705,
+        0.6959677419354838,
+        0.443161094224924
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "$113,900.00"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.6,
+        0.339209726443769,
+        0.6959677419354838,
+        0.34832826747720363
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "MONTHLY FEE"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 831,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "ssgh0097",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1764,
+        2339
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.18548387096774194,
+          0.339209726443769,
+          0.6959677419354838,
+          0.5963525835866261
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_description",
+            "left": 0.18548387096774194,
+            "right": 0.4879032258064516
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.6,
+            "right": 0.6959677419354838
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.34832826747720363,
+            "row_type": "header",
+            "top": 0.339209726443769
+          },
+          {
+            "bottom": 0.43343465045592705,
+            "row_type": "gap",
+            "top": 0.34832826747720363
+          },
+          {
+            "bottom": 0.443161094224924,
+            "row_type": "data",
+            "top": 0.43343465045592705
+          },
+          {
+            "bottom": 0.5817629179331307,
+            "row_type": "gap",
+            "top": 0.443161094224924
+          },
+          {
+            "bottom": 0.5963525835866261,
+            "row_type": "footer",
+            "top": 0.5817629179331307
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "structured_rows"
+      }
+    },
+    "source": "ucsf"
+  }
+}

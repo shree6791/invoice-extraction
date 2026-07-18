@@ -1,0 +1,278 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.7928541492036882,
+        0.10816476260350069,
+        0.8428940323932618,
+        0.12325752017608217
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "6061"
+    },
+    {
+      "bbox": [
+        0.09674377416650894,
+        0.33120218006498275,
+        0.18629032258064515,
+        0.3465045592705167
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "09/28/2001"
+    },
+    {
+      "bbox": [
+        0.4290322580645161,
+        0.33191489361702126,
+        0.5126308033420761,
+        0.3465045592705167
+      ],
+      "fieldtype": "date_due",
+      "page": 0,
+      "text": "09/28/2001"
+    },
+    {
+      "bbox": [
+        0.06049021099614526,
+        0.04403278785547303,
+        0.2934122878203828,
+        0.059234583662719664
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Matson-Charlton Surety Group"
+    },
+    {
+      "bbox": [
+        0.061880790559275034,
+        0.04485673537104105,
+        0.29404306617891585,
+        0.0990737726748143
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "Matson-Charlton Surety Group\n770 South Dixie Highway\nSuite 101\nCoral Gables FL 33146"
+    },
+    {
+      "bbox": [
+        0.10985578548725232,
+        0.19500234621709486,
+        0.4873981368769866,
+        0.21072834187976378
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "COUNCIL FOR TOBACCO RESEARCH U.S.A., INC."
+    },
+    {
+      "bbox": [
+        0.11055107526881722,
+        0.1959259705861563,
+        0.48551296973727964,
+        0.23798673436172327
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "COUNCIL FOR TOBACCO RESEARCH U.S.A., INC.\n122 E. 42ND ST. SUITE 2518\nNEW YORK NY 10168"
+    },
+    {
+      "bbox": [
+        0.8051455670521404,
+        0.4324648807233958,
+        0.8169654933387435,
+        0.44504567725353095
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.8065361466152702,
+        0.4319406808679735,
+        0.8781509941164537,
+        0.44556987710895324
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "$2,390.00"
+    },
+    {
+      "bbox": [
+        0.8051455670521404,
+        0.43298908057881813,
+        0.8781509941164537,
+        0.44556987710895324
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "$2,390.00"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.21774193548387097,
+        0.3981762917933131,
+        0.36129032258064514,
+        0.4115501519756839
+      ],
+      "fieldtype": "line_item_code",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "CGB-3008918/APPEAL"
+    },
+    {
+      "bbox": [
+        0.45483870967741935,
+        0.3981762917933131,
+        0.7419354838709677,
+        0.4115501519756839
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "Policy Generated NEW - COUNCIL FOR TOBAC"
+    },
+    {
+      "bbox": [
+        0.8161290322580645,
+        0.3981762917933131,
+        0.8790322580645161,
+        0.4115501519756839
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "$2,390.00"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.21774193548387097,
+        0.3621966631866019,
+        0.3177402005574897,
+        0.3738601823708207
+      ],
+      "fieldtype": "line_item_code",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Policy Number"
+    },
+    {
+      "bbox": [
+        0.45483870967741935,
+        0.3636311054170438,
+        0.5217979042089315,
+        0.3738601823708207
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Reference"
+    },
+    {
+      "bbox": [
+        0.8262196532460472,
+        0.36327249485943336,
+        0.8790322580645161,
+        0.3738601823708207
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Amount"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 717,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "mkcm0053",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1764,
+        2339
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.06370967741935483,
+          0.3586626139817629,
+          0.9,
+          0.4474164133738602
+        ],
+        "columns": [
+          {
+            "column_type": "",
+            "left": 0.06370967741935483,
+            "right": 0.09516129032258064
+          },
+          {
+            "column_type": "",
+            "left": 0.11290322580645161,
+            "right": 0.1403225806451613
+          },
+          {
+            "column_type": "",
+            "left": 0.17096774193548386,
+            "right": 0.1975806451612903
+          },
+          {
+            "column_type": "line_item_code",
+            "left": 0.21774193548387097,
+            "right": 0.36129032258064514
+          },
+          {
+            "column_type": "line_item_description",
+            "left": 0.45483870967741935,
+            "right": 0.7419354838709677
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.8161290322580645,
+            "right": 0.8790322580645161
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.3738601823708207,
+            "row_type": "header",
+            "top": 0.3586626139817629
+          },
+          {
+            "bottom": 0.3981762917933131,
+            "row_type": "gap",
+            "top": 0.3738601823708207
+          },
+          {
+            "bottom": 0.4115501519756839,
+            "row_type": "data",
+            "top": 0.3981762917933131
+          },
+          {
+            "bottom": 0.42857142857142855,
+            "row_type": "gap",
+            "top": 0.4115501519756839
+          },
+          {
+            "bottom": 0.4474164133738602,
+            "row_type": "footer",
+            "top": 0.42857142857142855
+          }
+        ],
+        "table_border_type": "row_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

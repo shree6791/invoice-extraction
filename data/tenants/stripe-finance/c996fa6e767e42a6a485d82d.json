@@ -1,0 +1,880 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.6196429083819703,
+        0.14962593516209477,
+        0.6540322580645161,
+        0.15945735053255242
+      ],
+      "fieldtype": "document_id",
+      "page": 2,
+      "text": "T2191"
+    },
+    {
+      "bbox": [
+        0.6213933121534139,
+        0.18924278187538623,
+        0.6721550215252765,
+        0.2000738478182349
+      ],
+      "fieldtype": "date_issue",
+      "page": 2,
+      "text": "31-Oct-06"
+    },
+    {
+      "bbox": [
+        0.38138334798907764,
+        0.39023585954429757,
+        0.4918082103022169,
+        0.4024270883368801
+      ],
+      "fieldtype": "date_due",
+      "page": 1,
+      "text": "December 31, 2006"
+    },
+    {
+      "bbox": [
+        0.620518110267692,
+        0.16893453839719969,
+        0.6835326460396595,
+        0.18111948758290444
+      ],
+      "fieldtype": "order_id",
+      "page": 2,
+      "text": "Not Assigned"
+    },
+    {
+      "bbox": [
+        0.34833032380822204,
+        0.09176319355440302,
+        0.6030140725532567,
+        0.11004061733296013
+      ],
+      "fieldtype": "vendor_name",
+      "page": 2,
+      "text": "LABSTAT INTERNATIONAL INC."
+    },
+    {
+      "bbox": [
+        0.4314745029517901,
+        0.09351620947630923,
+        0.7693548387096775,
+        0.11372618981758356
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "LABSTAT INTERNATIONAL INC."
+    },
+    {
+      "bbox": [
+        0.4104696576944676,
+        0.09518550551244669,
+        0.7141647120399214,
+        0.11210904604814771
+      ],
+      "fieldtype": "vendor_name",
+      "page": 1,
+      "text": "LABSTAT INTERNATIONAL INC."
+    },
+    {
+      "bbox": [
+        0.43059930106606825,
+        0.09570806226567645,
+        0.7946832855263241,
+        0.12794196386757242
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "LABSTAT INTERNATIONAL INC.\n262 Manitou Drive, Kitchener, Ontario, Canada N2C 1L3"
+    },
+    {
+      "bbox": [
+        0.40959445580874587,
+        0.09615421518024365,
+        0.7377951629544091,
+        0.12444443129608508
+      ],
+      "fieldtype": "vendor_address",
+      "page": 1,
+      "text": "LABSTAT INTERNATIONAL INC.\n262 Manitou Drive, Kitchener, Ontario, Canada N2C 1L3"
+    },
+    {
+      "bbox": [
+        0.34833032380822204,
+        0.09607159427013862,
+        0.6275197253534662,
+        0.11974344896164696
+      ],
+      "fieldtype": "vendor_address",
+      "page": 2,
+      "text": "LABSTAT INTERNATIONAL INC.\n262 Manitou Drive, Kitchener, Ontario, Canada N2C 1L3"
+    },
+    {
+      "bbox": [
+        0.24068049186444448,
+        0.14930322621113182,
+        0.31069664272218595,
+        0.16013429215398045
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 2,
+      "text": "R.J. Reynolds"
+    },
+    {
+      "bbox": [
+        0.24155569375016625,
+        0.15000652438670764,
+        0.35620714077971793,
+        0.2000738478182349
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 2,
+      "text": "R.J. Reynolds\nP.O. Box 1148\n950 Reynolds Boulevard\nWinston-Salem NC\n27102-1487"
+    },
+    {
+      "bbox": [
+        0.7709677419354839,
+        0.4320448877805486,
+        0.7798387096774193,
+        0.44389027431421446
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 2,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.7701776327261145,
+        0.4328665682169835,
+        0.8346774193548387,
+        0.44212925040809425
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 2,
+      "text": "$4,192.16"
+    },
+    {
+      "bbox": [
+        0.771928036497558,
+        0.4328665682169835,
+        0.8305665628409165,
+        0.44212925040809425
+      ],
+      "fieldtype": "amount_due",
+      "page": 2,
+      "text": "$4,192.16"
+    },
+    {
+      "bbox": [
+        0.48311141420937437,
+        0.3668647497984401,
+        0.5303723160383499,
+        0.37769581574128874
+      ],
+      "fieldtype": "payment_terms",
+      "page": 1,
+      "text": "30 days"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.20887096774193548,
+        0.28366583541147133,
+        0.225,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "1"
+    },
+    {
+      "bbox": [
+        0.2411290322580645,
+        0.28366583541147133,
+        0.45564516129032256,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "Sample handling. login and recording"
+    },
+    {
+      "bbox": [
+        0.5056451612903226,
+        0.28366583541147133,
+        0.5516129032258065,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "$25.51"
+    },
+    {
+      "bbox": [
+        0.5854838709677419,
+        0.28366583541147133,
+        0.5935483870967742,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "1"
+    },
+    {
+      "bbox": [
+        0.6443548387096775,
+        0.28366583541147133,
+        0.6564516129032258,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.7153225806451613,
+        0.28366583541147133,
+        0.7266129032258064,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.7758064516129032,
+        0.28366583541147133,
+        0.8282258064516129,
+        0.293640897755611
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 2,
+      "text": "$76.53"
+    },
+    {
+      "bbox": [
+        0.20887096774193548,
+        0.30423940149625933,
+        0.225,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "2"
+    },
+    {
+      "bbox": [
+        0.2411290322580645,
+        0.30423940149625933,
+        0.45564516129032256,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "EPR evaluation of mainstream tobacco smoke\nParticulate Phase and Gas Vapour Phase)\n- FTC/ISO Smoking Regime"
+    },
+    {
+      "bbox": [
+        0.5056451612903226,
+        0.30423940149625933,
+        0.5516129032258065,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "$165.00"
+    },
+    {
+      "bbox": [
+        0.5854838709677419,
+        0.30423940149625933,
+        0.5935483870967742,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.6443548387096775,
+        0.30423940149625933,
+        0.6564516129032258,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.7153225806451613,
+        0.30423940149625933,
+        0.7266129032258064,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "9"
+    },
+    {
+      "bbox": [
+        0.7758064516129032,
+        0.30423940149625933,
+        0.8282258064516129,
+        0.3322942643391521
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 2,
+      "page": 2,
+      "text": "$1,485.00"
+    },
+    {
+      "bbox": [
+        0.20887096774193548,
+        0.3653366583541147,
+        0.225,
+        0.3734413965087282
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 3,
+      "page": 2,
+      "text": "4a"
+    },
+    {
+      "bbox": [
+        0.2411290322580645,
+        0.3653366583541147,
+        0.45564516129032256,
+        0.3734413965087282
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 3,
+      "page": 2,
+      "text": "Calibrations"
+    },
+    {
+      "bbox": [
+        0.5056451612903226,
+        0.3653366583541147,
+        0.5516129032258065,
+        0.3734413965087282
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 3,
+      "page": 2,
+      "text": "$86.25"
+    },
+    {
+      "bbox": [
+        0.7153225806451613,
+        0.3653366583541147,
+        0.7266129032258064,
+        0.3734413965087282
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 3,
+      "page": 2,
+      "text": "4"
+    },
+    {
+      "bbox": [
+        0.7758064516129032,
+        0.3653366583541147,
+        0.8282258064516129,
+        0.3734413965087282
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 3,
+      "page": 2,
+      "text": "$345.00"
+    },
+    {
+      "bbox": [
+        0.20887096774193548,
+        0.3734413965087282,
+        0.225,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "4b"
+    },
+    {
+      "bbox": [
+        0.2411290322580645,
+        0.3734413965087282,
+        0.45564516129032256,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "Free radical analysis"
+    },
+    {
+      "bbox": [
+        0.5056451612903226,
+        0.3734413965087282,
+        0.5516129032258065,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "$86.25"
+    },
+    {
+      "bbox": [
+        0.5854838709677419,
+        0.3734413965087282,
+        0.5935483870967742,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.6443548387096775,
+        0.3734413965087282,
+        0.6564516129032258,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.7153225806451613,
+        0.3734413965087282,
+        0.7266129032258064,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "9"
+    },
+    {
+      "bbox": [
+        0.7758064516129032,
+        0.3734413965087282,
+        0.8282258064516129,
+        0.3827930174563591
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 4,
+      "page": 2,
+      "text": "$776.25"
+    },
+    {
+      "bbox": [
+        0.20887096774193548,
+        0.4014962593516209,
+        0.225,
+        0.4096009975062344
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 5,
+      "page": 2,
+      "text": "5a"
+    },
+    {
+      "bbox": [
+        0.2411290322580645,
+        0.4014962593516209,
+        0.45564516129032256,
+        0.4096009975062344
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 5,
+      "page": 2,
+      "text": "Calibrations"
+    },
+    {
+      "bbox": [
+        0.5056451612903226,
+        0.4014962593516209,
+        0.5516129032258065,
+        0.4096009975062344
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 5,
+      "page": 2,
+      "text": "$86.25"
+    },
+    {
+      "bbox": [
+        0.7153225806451613,
+        0.4014962593516209,
+        0.7266129032258064,
+        0.4096009975062344
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 5,
+      "page": 2,
+      "text": "4"
+    },
+    {
+      "bbox": [
+        0.7758064516129032,
+        0.4014962593516209,
+        0.8282258064516129,
+        0.4096009975062344
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 5,
+      "page": 2,
+      "text": "$345.00"
+    },
+    {
+      "bbox": [
+        0.20887096774193548,
+        0.4096009975062344,
+        0.225,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "5b"
+    },
+    {
+      "bbox": [
+        0.2411290322580645,
+        0.4096009975062344,
+        0.45564516129032256,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "Free radical analysis"
+    },
+    {
+      "bbox": [
+        0.5056451612903226,
+        0.4096009975062344,
+        0.5516129032258065,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "$129.38"
+    },
+    {
+      "bbox": [
+        0.5854838709677419,
+        0.4096009975062344,
+        0.5935483870967742,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.6443548387096775,
+        0.4096009975062344,
+        0.6564516129032258,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "3"
+    },
+    {
+      "bbox": [
+        0.7153225806451613,
+        0.4096009975062344,
+        0.7266129032258064,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "9"
+    },
+    {
+      "bbox": [
+        0.7758064516129032,
+        0.4096009975062344,
+        0.8282258064516129,
+        0.41895261845386533
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 6,
+      "page": 2,
+      "text": "$1.164,38"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.20304681077840842,
+        0.224067687021991,
+        0.2284276654643397,
+        0.23354486972198357
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "Item"
+    },
+    {
+      "bbox": [
+        0.30544543140785535,
+        0.22181120806435795,
+        0.43847611803756414,
+        0.24685804805719544
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "Free Radical Analysis\n(6 Replicates)"
+    },
+    {
+      "bbox": [
+        0.5146186820953581,
+        0.22384203292864208,
+        0.5487515556385071,
+        0.2441502815714833
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "Cost/\nObs."
+    },
+    {
+      "bbox": [
+        0.5671307952386642,
+        0.22316509130721401,
+        0.617017302724805,
+        0.25498134751433194
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "Obs. per\nBrand or\nSample"
+    },
+    {
+      "bbox": [
+        0.6226477530429954,
+        0.22451897455007008,
+        0.6765310309538853,
+        0.25565828913576
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "No. of\nBrands or\nSamples"
+    },
+    {
+      "bbox": [
+        0.6905342611254336,
+        0.22316509130721401,
+        0.7500479893545139,
+        0.24550416481433937
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "Total\nNo of Obs."
+    },
+    {
+      "bbox": [
+        0.7710528346118364,
+        0.22384203292864208,
+        0.8305665628409165,
+        0.24618110643576743
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 2,
+      "text": "Cost\nper \"ltem\""
+    }
+  ],
+  "metadata": {
+    "cluster_id": 1010,
+    "currency": "usd",
+    "document_type": "order",
+    "language": "eng",
+    "original_filename": "yjyy0228",
+    "page_count": 3,
+    "page_sizes_at_200dpi": [
+      [
+        1700,
+        2200
+      ],
+      [
+        1700,
+        2200
+      ],
+      [
+        1700,
+        2200
+      ]
+    ],
+    "page_to_table_grid": {
+      "2": {
+        "bbox": [
+          0.19032258064516128,
+          0.21633416458852867,
+          0.8419354838709677,
+          0.45074812967581046
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_position",
+            "left": 0.20887096774193548,
+            "right": 0.225
+          },
+          {
+            "column_type": "line_item_description",
+            "left": 0.2411290322580645,
+            "right": 0.45564516129032256
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.5056451612903226,
+            "right": 0.5516129032258065
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.5854838709677419,
+            "right": 0.5935483870967742
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.6443548387096775,
+            "right": 0.6564516129032258
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.7153225806451613,
+            "right": 0.7266129032258064
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.7758064516129032,
+            "right": 0.8282258064516129
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.2543640897755611,
+            "row_type": "header",
+            "top": 0.21633416458852867
+          },
+          {
+            "bottom": 0.26122194513715713,
+            "row_type": "gap",
+            "top": 0.2543640897755611
+          },
+          {
+            "bottom": 0.28366583541147133,
+            "row_type": "gap-with-text",
+            "top": 0.26122194513715713
+          },
+          {
+            "bottom": 0.293640897755611,
+            "row_type": "data",
+            "top": 0.28366583541147133
+          },
+          {
+            "bottom": 0.30423940149625933,
+            "row_type": "gap",
+            "top": 0.293640897755611
+          },
+          {
+            "bottom": 0.3322942643391521,
+            "row_type": "data",
+            "top": 0.30423940149625933
+          },
+          {
+            "bottom": 0.3385286783042394,
+            "row_type": "gap",
+            "top": 0.3322942643391521
+          },
+          {
+            "bottom": 0.3653366583541147,
+            "row_type": "gap-with-text",
+            "top": 0.3385286783042394
+          },
+          {
+            "bottom": 0.3734413965087282,
+            "row_type": "data",
+            "top": 0.3653366583541147
+          },
+          {
+            "bottom": 0.3827930174563591,
+            "row_type": "data",
+            "top": 0.3734413965087282
+          },
+          {
+            "bottom": 0.39089775561097256,
+            "row_type": "gap",
+            "top": 0.3827930174563591
+          },
+          {
+            "bottom": 0.4014962593516209,
+            "row_type": "gap-with-text",
+            "top": 0.39089775561097256
+          },
+          {
+            "bottom": 0.4096009975062344,
+            "row_type": "data",
+            "top": 0.4014962593516209
+          },
+          {
+            "bottom": 0.41895261845386533,
+            "row_type": "data",
+            "top": 0.4096009975062344
+          },
+          {
+            "bottom": 0.428927680798005,
+            "row_type": "gap",
+            "top": 0.41895261845386533
+          },
+          {
+            "bottom": 0.45074812967581046,
+            "row_type": "footer",
+            "top": 0.428927680798005
+          }
+        ],
+        "table_border_type": "column_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

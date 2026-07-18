@@ -1,0 +1,99 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.5616901435853534,
+        0.20774711246200606,
+        0.6545050391065801,
+        0.22583829787234044
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "01/7/16"
+    },
+    {
+      "bbox": [
+        0.22643633993540602,
+        0.31569118541033436,
+        0.5488880890307015,
+        0.33197325227963526
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Fukushima Medical Foundation"
+    },
+    {
+      "bbox": [
+        0.18402953422312152,
+        0.4415756838905775,
+        0.5048810264990855,
+        0.45785775075987845
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Fukushima Medical Foundation"
+    },
+    {
+      "bbox": [
+        0.18162914899412427,
+        0.2807148936170213,
+        0.44887203782248336,
+        0.2988060790273556
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "Philip Morris Incorporated"
+    },
+    {
+      "bbox": [
+        0.2848457138410055,
+        0.35127051671732523,
+        0.32805264796295575,
+        0.3675525835866262
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "US$"
+    },
+    {
+      "bbox": [
+        0.2848457138410055,
+        0.351873556231003,
+        0.43046908440017123,
+        0.36936170212765956
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "US$19,850.85"
+    },
+    {
+      "bbox": [
+        0.28404558543133973,
+        0.3524765957446808,
+        0.43046908440017123,
+        0.36936170212765956
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "US$19,850.85"
+    }
+  ],
+  "line_item_extractions": [],
+  "line_item_headers": [],
+  "metadata": {
+    "cluster_id": 988,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "ntcl0054",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1692,
+        2245
+      ]
+    ],
+    "page_to_table_grid": {},
+    "source": "ucsf"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invoice Line-Item Extraction</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Invoice Extraction</h1>
+      <p class="sub">Layout parse → schema extract → grounded chat</p>
+    </div>
+    <div class="controls">
+      <label>
+        Company
+        <select id="companySelect"></select>
+      </label>
+      <span id="tenantBadge" class="tenant-badge"></span>
+      <label>
+        Invoice
+        <select id="sampleSelect"></select>
+      </label>
+      <button id="extractBtn" type="button">Extract</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel viewer">
+      <div class="panel-head">
+        <span>Document</span>
+        <span id="status" class="status">Ready</span>
+      </div>
+      <div class="canvas-wrap">
+        <img id="pageImg" alt="Invoice page" />
+        <canvas id="overlay"></canvas>
+      </div>
+      <div id="legend" class="legend"></div>
+      <div id="reviewBadge" class="review-badge"></div>
+    </section>
+
+    <section class="panel chat-panel">
+      <div class="panel-head"><span>Ask about this invoice</span></div>
+      <div class="chat-body">
+        <textarea id="chatQuestion" rows="4" placeholder="What is the total? Which fields need review?" disabled></textarea>
+        <button id="chatBtn" type="button" disabled title="Extract a document first">Ask</button>
+        <pre id="chatAnswer" class="chat-answer">Extract a document first, then ask grounded questions.</pre>
+        <div id="chatCitations" class="chat-citations"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

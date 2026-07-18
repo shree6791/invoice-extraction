@@ -1,0 +1,14 @@
+venv/
+.env
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+outputs/
+*.pdf
+!app/static/**
+.cache/
+uploads/
+data/docile

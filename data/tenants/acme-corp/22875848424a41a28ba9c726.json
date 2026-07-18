@@ -1,0 +1,353 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.7612704265704584,
+        0.11074786644111502,
+        0.9076422785795134,
+        0.1250025423196744
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "10-120-0053809"
+    },
+    {
+      "bbox": [
+        0.7400670274476514,
+        0.08881759585871601,
+        0.844716061827957,
+        0.10252401497271539
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "10/25/2001"
+    },
+    {
+      "bbox": [
+        0.5765956600169779,
+        0.2779661796319075,
+        0.9308976195529145,
+        0.2911243419813469
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "VIDEO MONITORING SERVICES OF AMERICA, L.P."
+    },
+    {
+      "bbox": [
+        0.5716266719118803,
+        0.27705798038278856,
+        0.9331497508523472,
+        0.304938028723195
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "VIDEO MONITORING SERVICES OF AMERICA, L.P.\n330 WEST 42ND STREET, NEW YORK, NEW YORK 10036"
+    },
+    {
+      "bbox": [
+        0.034199030843237124,
+        0.021382013817839034,
+        0.4562150714487833,
+        0.03618494646095837
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "VIDEO MONITORING SERVICES OF AMERICA, L.P."
+    },
+    {
+      "bbox": [
+        0.7462228529994341,
+        0.047150081752157874,
+        0.8488199455291454,
+        0.06140475763071724
+      ],
+      "fieldtype": "vendor_tax_id",
+      "page": 0,
+      "text": "13-3889971"
+    },
+    {
+      "bbox": [
+        0.21887379739671758,
+        0.14254675878559359,
+        0.29547962648556875,
+        0.15460840760591305
+      ],
+      "fieldtype": "customer_id",
+      "page": 0,
+      "text": "BSMG005"
+    },
+    {
+      "bbox": [
+        0.14295194892473118,
+        0.16502528613255257,
+        0.4021806027164686,
+        0.17927996201111193
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "WEBER SHANDWICK (CHICAGO)"
+    },
+    {
+      "bbox": [
+        0.1415839876910017,
+        0.16553778702116298,
+        0.4028193023865722,
+        0.24178123317094913
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "WEBER SHANDWICK (CHICAGO)\n676 NORTH ST. CLAIR\nSUITE 1000\nCHICAGO, IL\n60611"
+    },
+    {
+      "bbox": [
+        0.600534981607244,
+        0.1661217996616725,
+        0.8597636353989814,
+        0.18037647554023187
+      ],
+      "fieldtype": "customer_delivery_name",
+      "page": 0,
+      "text": "WEBER SHANDWICK (CHICAGO)"
+    },
+    {
+      "bbox": [
+        0.600534981607244,
+        0.16611862136158811,
+        0.8973825693265421,
+        0.2576806793431884
+      ],
+      "fieldtype": "customer_delivery_address",
+      "page": 0,
+      "text": "WEBER SHANDWICK (CHICAGO)\n676 NORTH ST- CLAIR\nSUITE 1000\nCHICAGO,IL\n60611 NCG056\nALEX ABRAHAM"
+    },
+    {
+      "bbox": [
+        0.8549757710809281,
+        0.6409121577706112,
+        0.9192699490662138,
+        0.6546185768846106
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "128.80"
+    },
+    {
+      "bbox": [
+        0.8563437323146578,
+        0.6414604145351711,
+        0.9179019878324844,
+        0.6557150904137306
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "128.80"
+    },
+    {
+      "bbox": [
+        0.7270713957272213,
+        0.06962860909911686,
+        0.8495039261460102,
+        0.08388328497767622
+      ],
+      "fieldtype": "payment_terms",
+      "page": 0,
+      "text": "NET 10 DAYS"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.7685483870967742,
+        0.38461538461538464,
+        0.8298387096774194,
+        0.40142210730446026
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "110.00"
+    },
+    {
+      "bbox": [
+        0.13982756359821663,
+        0.35612405497315985,
+        0.6542191188040912,
+        0.382842434632716
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "\"MICHAEL POPKIN/HELPING CHILDREN COPE WITH FEARS\"\nCNN SUNDAY MORNING"
+    },
+    {
+      "bbox": [
+        0.1412765538945712,
+        0.3853109805795228,
+        0.22386900078678204,
+        0.39692766738802543
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "10/21/01"
+    },
+    {
+      "bbox": [
+        0.7685483870967742,
+        0.40142210730446026,
+        0.8298387096774194,
+        0.4182288299935359
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "8.80"
+    },
+    {
+      "bbox": [
+        0.34703317597692107,
+        0.4031716365475956,
+        0.5013506425386834,
+        0.417692495058224
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "ROYALTY AMOUNT"
+    },
+    {
+      "bbox": [
+        0.7685483870967742,
+        0.579185520361991,
+        0.8298387096774194,
+        0.59469941822883
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "10.00"
+    },
+    {
+      "bbox": [
+        0.32167584579071595,
+        0.578656211648539,
+        0.5426468659847888,
+        0.5931770701591673
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "MESSENGER NON-TAXABLE"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.7389850511408339,
+        0.3185150314306324,
+        0.8085365853658536,
+        0.33187422126041055
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "CHARG"
+    },
+    {
+      "bbox": [
+        0.35934959349593487,
+        0.3177163842125479,
+        0.47526881720430103,
+        0.33339891140402633
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "DESCRIPTION"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 431,
+    "currency": "other",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "hzwd0006",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1692,
+        2112
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.02903225806451613,
+          0.31157078215901746,
+          0.9524193548387097,
+          0.6897220426632191
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.7685483870967742,
+            "right": 0.8298387096774194
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.3341952165481577,
+            "row_type": "header",
+            "top": 0.31157078215901746
+          },
+          {
+            "bottom": 0.35488041370394313,
+            "row_type": "gap-with-text",
+            "top": 0.3341952165481577
+          },
+          {
+            "bottom": 0.38461538461538464,
+            "row_type": "down-merge",
+            "top": 0.35488041370394313
+          },
+          {
+            "bottom": 0.40142210730446026,
+            "row_type": "data",
+            "top": 0.38461538461538464
+          },
+          {
+            "bottom": 0.4182288299935359,
+            "row_type": "data",
+            "top": 0.40142210730446026
+          },
+          {
+            "bottom": 0.579185520361991,
+            "row_type": "gap",
+            "top": 0.4182288299935359
+          },
+          {
+            "bottom": 0.59469941822883,
+            "row_type": "data",
+            "top": 0.579185520361991
+          },
+          {
+            "bottom": 0.6393018745959922,
+            "row_type": "gap",
+            "top": 0.59469941822883
+          },
+          {
+            "bottom": 0.6897220426632191,
+            "row_type": "footer",
+            "top": 0.6393018745959922
+          }
+        ],
+        "table_border_type": "column_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

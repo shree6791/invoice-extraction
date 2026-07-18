@@ -1,0 +1,384 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.700467902854455,
+        0.15812899671286812,
+        0.7422109028792118,
+        0.1750165594686113
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "5076"
+    },
+    {
+      "bbox": [
+        0.6717741935483871,
+        0.1926717387132519,
+        0.7422109028792118,
+        0.2115501519756839
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "10/12/99"
+    },
+    {
+      "bbox": [
+        0.3247809026316441,
+        0.05143030475612701,
+        0.6149456589012948,
+        0.07138833346745987
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "A-1 Limousine Service, Inc."
+    },
+    {
+      "bbox": [
+        0.3247809026316441,
+        0.05143030475612701,
+        0.6159637808531181,
+        0.0898111292009979
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "A-1 Limousine Service, Inc.\n4355 Dale Blvd., Dale City, VA 22193"
+    },
+    {
+      "bbox": [
+        0.0794135122422202,
+        0.14200905044602233,
+        0.23722241477483724,
+        0.15966422969066293
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "Mr. Tommy J. Payne"
+    },
+    {
+      "bbox": [
+        0.07534102443492684,
+        0.14200905044602233,
+        0.3471795855717575,
+        0.22874971369143057
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "Mr. Tommy J. Paync\nVice-President, Government Affiars\nR. J. Reynolds Tobacco Co.\nP. O. Box 2959\nWinston-Salem, NC 27102"
+    },
+    {
+      "bbox": [
+        0.7931170004703785,
+        0.41835098644909285,
+        0.8073707077959053,
+        0.435238549204836
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.7935483870967742,
+        0.41835098644909285,
+        0.8603130492907186,
+        0.4367737821826308
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "$149.50"
+    },
+    {
+      "bbox": [
+        0.7935483870967742,
+        0.41835098644909285,
+        0.861331171242542,
+        0.4360061656937334
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "$149.50"
+    },
+    {
+      "bbox": [
+        0.4491935483870968,
+        0.7607079404973413,
+        0.5508039759364246,
+        0.7783631197419818
+      ],
+      "fieldtype": "payment_terms",
+      "page": 0,
+      "text": "Net 15 Days"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.1883525610873171,
+        0.31625799342573624,
+        0.2993278538360607,
+        0.33161032320368455
+      ],
+      "fieldtype": "line_item_person_name",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "Tommy Payne"
+    },
+    {
+      "bbox": [
+        0.6241935483870967,
+        0.2948328267477204,
+        0.6766129032258065,
+        0.3325227963525836
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "55.00"
+    },
+    {
+      "bbox": [
+        0.8112903225806452,
+        0.2948328267477204,
+        0.8637096774193549,
+        0.3325227963525836
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "63.25"
+    },
+    {
+      "bbox": [
+        0.08043163419404352,
+        0.29629996471440334,
+        0.13846458544797363,
+        0.31395514395904395
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "10/7/99"
+    },
+    {
+      "bbox": [
+        0.1883525610873171,
+        0.2970675812033008,
+        0.29220100017329736,
+        0.31395514395904395
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "Sedan service"
+    },
+    {
+      "bbox": [
+        0.18467741935483872,
+        0.3659574468085106,
+        0.321774193548387,
+        0.3878419452887538
+      ],
+      "fieldtype": "line_item_person_name",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "Tommy Payne"
+    },
+    {
+      "bbox": [
+        0.6241935483870967,
+        0.3659574468085106,
+        0.6766129032258065,
+        0.3878419452887538
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "75.00"
+    },
+    {
+      "bbox": [
+        0.8112903225806452,
+        0.3659574468085106,
+        0.8637096774193549,
+        0.3878419452887538
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "86.25"
+    },
+    {
+      "bbox": [
+        0.0794135122422202,
+        0.34849788595942777,
+        0.13846458544797363,
+        0.3661530652040684
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "10/8/99"
+    },
+    {
+      "bbox": [
+        0.1883525610873171,
+        0.3492655024483252,
+        0.2799835367514173,
+        0.3653854487151709
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "Van scrvicc"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.18467741935483872,
+        0.26382978723404255,
+        0.29220100017329736,
+        0.2801800184475576
+      ],
+      "fieldtype": "line_item_person_name",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "CUSTOMER"
+    },
+    {
+      "bbox": [
+        0.6241935483870967,
+        0.26382978723404255,
+        0.6801054638179883,
+        0.27941240195866013
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "RATE"
+    },
+    {
+      "bbox": [
+        0.7920988785185551,
+        0.26382978723404255,
+        0.8637096774193549,
+        0.2801800184475576
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "TOTAL"
+    },
+    {
+      "bbox": [
+        0.07737726833857352,
+        0.26252483920291697,
+        0.13337397568885698,
+        0.27941240195866013
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "DATE"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 472,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "nscw0102",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1764,
+        2339
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.07499999999999991,
+          0.26382978723404255,
+          0.8637096774193549,
+          0.4401215805471125
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_person_name",
+            "left": 0.18467741935483872,
+            "right": 0.321774193548387
+          },
+          {
+            "column_type": "",
+            "left": 0.34758064516129034,
+            "right": 0.4306451612903226
+          },
+          {
+            "column_type": "",
+            "left": 0.45564516129032256,
+            "right": 0.5975806451612903
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.6241935483870967,
+            "right": 0.6766129032258065
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.8112903225806452,
+            "right": 0.8637096774193549
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.2796352583586626,
+            "row_type": "header",
+            "top": 0.26382978723404255
+          },
+          {
+            "bottom": 0.2948328267477204,
+            "row_type": "gap",
+            "top": 0.2796352583586626
+          },
+          {
+            "bottom": 0.3325227963525836,
+            "row_type": "data",
+            "top": 0.2948328267477204
+          },
+          {
+            "bottom": 0.34711246200607904,
+            "row_type": "gap",
+            "top": 0.3325227963525836
+          },
+          {
+            "bottom": 0.3659574468085106,
+            "row_type": "down-merge",
+            "top": 0.34711246200607904
+          },
+          {
+            "bottom": 0.3878419452887538,
+            "row_type": "data",
+            "top": 0.3659574468085106
+          },
+          {
+            "bottom": 0.4188449848024316,
+            "row_type": "gap",
+            "top": 0.3878419452887538
+          },
+          {
+            "bottom": 0.4401215805471125,
+            "row_type": "footer",
+            "top": 0.4188449848024316
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

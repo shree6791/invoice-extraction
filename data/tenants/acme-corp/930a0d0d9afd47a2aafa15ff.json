@@ -1,0 +1,330 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.7230028222890863,
+        0.031096253752895594,
+        0.7903459053483544,
+        0.042666952823740466
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "10/28/2018"
+    },
+    {
+      "bbox": [
+        0.8112903225806452,
+        0.14463373838556087,
+        0.8492711030252139,
+        0.15548126876447796
+      ],
+      "fieldtype": "order_id",
+      "page": 0,
+      "text": "57022"
+    },
+    {
+      "bbox": [
+        0.7225029366585345,
+        0.045935884925367744,
+        0.8094641727658806,
+        0.0576999530160107
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Regional Reps"
+    },
+    {
+      "bbox": [
+        0.7225029366585345,
+        0.04481549748816365,
+        0.8456980211439414,
+        0.09299215728793957
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "Regional Reps\n6505 Rockside Road\nSuite 200\nCleveland, OH 44131"
+    },
+    {
+      "bbox": [
+        0.7239522905936568,
+        0.15797462864577685,
+        0.8087394957983194,
+        0.17141927789222597
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Regional Reps"
+    },
+    {
+      "bbox": [
+        0.7217782596909732,
+        0.1585348223643789,
+        0.8471473750790639,
+        0.20671148216415486
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "Regional Reps\n6505 Rockside Road\nSuite 200\nCleveland, OH 44131"
+    },
+    {
+      "bbox": [
+        0.1891406885334779,
+        0.13108533015287865,
+        0.33914882081865005,
+        0.14396978568072571
+      ],
+      "fieldtype": "vendor_email",
+      "page": 0,
+      "text": "djones@regionalreps.com"
+    },
+    {
+      "bbox": [
+        0.5079985542604138,
+        0.04649607864396978,
+        0.5172322907191006,
+        0.05640715797036875
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.12983870967741937,
+        0.5270453338492411,
+        0.16532258064516128,
+        0.5378928642281581
+      ],
+      "fieldtype": "amount_total_net",
+      "page": 0,
+      "text": "540.00"
+    },
+    {
+      "bbox": [
+        0.1300095631283092,
+        0.5472940572232197,
+        0.16612903225806452,
+        0.5581415876021366
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "540.00"
+    },
+    {
+      "bbox": [
+        0.916614186084482,
+        0.5480172259151473,
+        0.9524193548387097,
+        0.5588647562940645
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "540.00"
+    },
+    {
+      "bbox": [
+        0.5060084435425559,
+        0.044836458899523875,
+        0.5555804352389615,
+        0.05568398927844095
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "$540.00"
+    },
+    {
+      "bbox": [
+        0.43024747510087935,
+        0.21912011365412476,
+        0.5022671611503743,
+        0.23069081272496963
+      ],
+      "fieldtype": "payment_terms",
+      "page": 0,
+      "text": "Cash Order"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.04838709677419355,
+        0.428927680798005,
+        0.06774193548387097,
+        0.4395261845386534
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "1"
+    },
+    {
+      "bbox": [
+        0.10161290322580645,
+        0.428927680798005,
+        0.2701612903225806,
+        0.4395261845386534
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "TWTF. ./M 6:OOAM-7:00PM"
+    },
+    {
+      "bbox": [
+        0.29354838709677417,
+        0.428927680798005,
+        0.3185483870967742,
+        0.4395261845386534
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "$18"
+    },
+    {
+      "bbox": [
+        0.9241935483870968,
+        0.428927680798005,
+        0.9475806451612904,
+        0.4395261845386534
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "30"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.04838709677419355,
+        0.41458852867830426,
+        0.06774193548387097,
+        0.4251870324189526
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Ln"
+    },
+    {
+      "bbox": [
+        0.10161290322580645,
+        0.41458852867830426,
+        0.15339257807944393,
+        0.42551245391644876
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Daypart"
+    },
+    {
+      "bbox": [
+        0.29354838709677417,
+        0.41458852867830426,
+        0.3254915681197957,
+        0.42551245391644876
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Rate"
+    },
+    {
+      "bbox": [
+        0.8988430947216196,
+        0.41466492353753165,
+        0.9418678422317075,
+        0.42551245391644876
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Spots"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 302,
+    "currency": "usd",
+    "document_type": "order",
+    "language": "eng",
+    "original_filename": "f99a93ae-4425-4e85-abf5-cdb871fdfe4c",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1700,
+        2200
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.04838709677419355,
+          0.41458852867830426,
+          0.9475806451612904,
+          0.456359102244389
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_position",
+            "left": 0.04838709677419355,
+            "right": 0.06774193548387097
+          },
+          {
+            "column_type": "line_item_description",
+            "left": 0.10161290322580645,
+            "right": 0.2701612903225806
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.29354838709677417,
+            "right": 0.3185483870967742
+          },
+          {
+            "column_type": "",
+            "left": 0.3548387096774194,
+            "right": 0.3709677419354839
+          },
+          {
+            "column_type": "",
+            "left": 0.3935483870967742,
+            "right": 0.4120967741935484
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.9241935483870968,
+            "right": 0.9475806451612904
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.4251870324189526,
+            "row_type": "header",
+            "top": 0.41458852867830426
+          },
+          {
+            "bottom": 0.428927680798005,
+            "row_type": "gap",
+            "top": 0.4251870324189526
+          },
+          {
+            "bottom": 0.4395261845386534,
+            "row_type": "data",
+            "top": 0.428927680798005
+          },
+          {
+            "bottom": 0.456359102244389,
+            "row_type": "footer",
+            "top": 0.4395261845386534
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "pif"
+  }
+}

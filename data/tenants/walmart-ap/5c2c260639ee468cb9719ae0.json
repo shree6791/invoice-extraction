@@ -1,0 +1,594 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.7145146698315109,
+        0.3346869300911854,
+        0.7737241721467761,
+        0.34554164133738596
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "177275"
+    },
+    {
+      "bbox": [
+        0.188830304681116,
+        0.181055547112462,
+        0.24964006381571266,
+        0.1913072188449848
+      ],
+      "fieldtype": "document_id",
+      "page": 1,
+      "text": "177275"
+    },
+    {
+      "bbox": [
+        0.6216997743102844,
+        0.17970577507598784,
+        0.786526226701428,
+        0.19331306990881458
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "February 29, 2000"
+    },
+    {
+      "bbox": [
+        0.11361823417253589,
+        0.19432241641337386,
+        0.2784446865636795,
+        0.20758928571428573
+      ],
+      "fieldtype": "date_issue",
+      "page": 1,
+      "text": "February 29, 2000"
+    },
+    {
+      "bbox": [
+        0.7241162107474999,
+        0.3203647416413374,
+        0.7737241721467761,
+        0.33191489361702126
+      ],
+      "fieldtype": "order_id",
+      "page": 0,
+      "text": "08679"
+    },
+    {
+      "bbox": [
+        0.6200995174909529,
+        0.2365422492401216,
+        0.8097299505817347,
+        0.2480243161094225
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "BSMG Worldwide, Inc."
+    },
+    {
+      "bbox": [
+        0.6216968218069278,
+        0.23619662714430809,
+        0.8303568771574813,
+        0.2901712470190816
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "BSMG Worldwide, Inc.\nP.O. Box 100583\nAtlanta, GA 30384-0583\nUSA"
+    },
+    {
+      "bbox": [
+        0.19203081831977897,
+        0.9482796352583587,
+        0.4776766605704502,
+        0.9609434650455927
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "625 N Michigan Avenue Chicago Illinois"
+    },
+    {
+      "bbox": [
+        0.1120179773532044,
+        0.20865167173252278,
+        0.2008322308261022,
+        0.21890334346504559
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "LORILLARD"
+    },
+    {
+      "bbox": [
+        0.11197885668372815,
+        0.2085173349008345,
+        0.3493985091060588,
+        0.2763316008973448
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "LORILLARD\nAttn: Sheldon Johnson\n714 Green Valley Road\nPO Box 10529\nGreensboro, NC 27404-0529"
+    },
+    {
+      "bbox": [
+        0.7868804091266719,
+        0.25130965045592707,
+        0.7977280244367485,
+        0.26287165010239794
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 1,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.785483870967742,
+        0.25191268996960486,
+        0.893743433596638,
+        0.2639734802431611
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 1,
+      "text": "$153,716.92"
+    },
+    {
+      "bbox": [
+        0.7857260982917622,
+        0.25115889057750757,
+        0.893743433596638,
+        0.26382272036474164
+      ],
+      "fieldtype": "amount_due",
+      "page": 1,
+      "text": "$153,716.92"
+    },
+    {
+      "bbox": [
+        0.3721121670459109,
+        0.8836699784422157,
+        0.4700943648775265,
+        0.8961226115715758
+      ],
+      "fieldtype": "payment_terms",
+      "page": 1,
+      "text": "due upon receipt"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.4613981762917933,
+        0.4596774193548387,
+        0.4729483282674772
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Parents"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.4613981762917933,
+        0.7725806451612903,
+        0.4729483282674772
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "412.50"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.4899696048632219,
+        0.4596774193548387,
+        0.5015197568389058
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "Teens"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.4899696048632219,
+        0.7725806451612903,
+        0.5015197568389058
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "6,136.25"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.5732522796352584,
+        0.4596774193548387,
+        0.5866261398176292
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "Burrelle's Clipping Service"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.5732522796352584,
+        0.7725806451612903,
+        0.5866261398176292
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "331.70"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.6285714285714286,
+        0.4596774193548387,
+        0.6413373860182371
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "Associated Release Service"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.6285714285714286,
+        0.7725806451612903,
+        0.6413373860182371
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "3,359.01"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.6851063829787234,
+        0.4596774193548387,
+        0.6990881458966566
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 4,
+      "page": 0,
+      "text": "National Photo Service"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.6851063829787234,
+        0.7725806451612903,
+        0.6990881458966566
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 4,
+      "page": 0,
+      "text": "447.46"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.7422492401215806,
+        0.4596774193548387,
+        0.7580547112462006
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 5,
+      "page": 0,
+      "text": "Market Source"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.7422492401215806,
+        0.7725806451612903,
+        0.7580547112462006
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 5,
+      "page": 0,
+      "text": "66,500.00"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.7580547112462006,
+        0.4596774193548387,
+        0.7696048632218845
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 6,
+      "page": 0,
+      "text": "Market Source"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.7580547112462006,
+        0.7725806451612903,
+        0.7696048632218845
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 6,
+      "page": 0,
+      "text": "75,840.00"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.8133738601823708,
+        0.4596774193548387,
+        0.8279635258358663
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 7,
+      "page": 0,
+      "text": "Business Wire"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.8133738601823708,
+        0.7725806451612903,
+        0.8279635258358663
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 7,
+      "page": 0,
+      "text": "525.00"
+    },
+    {
+      "bbox": [
+        0.17419354838709677,
+        0.8686930091185411,
+        0.4596774193548387,
+        0.8820668693009118
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 8,
+      "page": 0,
+      "text": "Loding for Jan. 12"
+    },
+    {
+      "bbox": [
+        0.557258064516129,
+        0.8686930091185411,
+        0.7725806451612903,
+        0.8820668693009118
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 8,
+      "page": 0,
+      "text": "165.00"
+    }
+  ],
+  "line_item_headers": [],
+  "metadata": {
+    "cluster_id": 924,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "qffp0094",
+    "page_count": 2,
+    "page_sizes_at_200dpi": [
+      [
+        1764,
+        2339
+      ],
+      [
+        1764,
+        2339
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.10725806451612903,
+          0.3884498480243161,
+          0.8895161290322581,
+          0.8996960486322189
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_description",
+            "left": 0.17338709677419356,
+            "right": 0.4596774193548387
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.557258064516129,
+            "right": 0.7725806451612903
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.41641337386018235,
+            "row_type": "gap-with-text",
+            "top": 0.3884498480243161
+          },
+          {
+            "bottom": 0.4328267477203647,
+            "row_type": "gap",
+            "top": 0.41641337386018235
+          },
+          {
+            "bottom": 0.4449848024316109,
+            "row_type": "subsection-header",
+            "top": 0.4328267477203647
+          },
+          {
+            "bottom": 0.4613981762917933,
+            "row_type": "gap",
+            "top": 0.4449848024316109
+          },
+          {
+            "bottom": 0.4729483282674772,
+            "row_type": "data",
+            "top": 0.4613981762917933
+          },
+          {
+            "bottom": 0.4899696048632219,
+            "row_type": "gap",
+            "top": 0.4729483282674772
+          },
+          {
+            "bottom": 0.5015197568389058,
+            "row_type": "data",
+            "top": 0.4899696048632219
+          },
+          {
+            "bottom": 0.5306990881458966,
+            "row_type": "gap",
+            "top": 0.5015197568389058
+          },
+          {
+            "bottom": 0.5452887537993921,
+            "row_type": "subsection-header",
+            "top": 0.5306990881458966
+          },
+          {
+            "bottom": 0.5592705167173252,
+            "row_type": "gap",
+            "top": 0.5452887537993921
+          },
+          {
+            "bottom": 0.5732522796352584,
+            "row_type": "subsection-header",
+            "top": 0.5592705167173252
+          },
+          {
+            "bottom": 0.5866261398176292,
+            "row_type": "data",
+            "top": 0.5732522796352584
+          },
+          {
+            "bottom": 0.601823708206687,
+            "row_type": "gap-with-text",
+            "top": 0.5866261398176292
+          },
+          {
+            "bottom": 0.6139817629179332,
+            "row_type": "gap",
+            "top": 0.601823708206687
+          },
+          {
+            "bottom": 0.6285714285714286,
+            "row_type": "subsection-header",
+            "top": 0.6139817629179332
+          },
+          {
+            "bottom": 0.6413373860182371,
+            "row_type": "data",
+            "top": 0.6285714285714286
+          },
+          {
+            "bottom": 0.6559270516717325,
+            "row_type": "gap-with-text",
+            "top": 0.6413373860182371
+          },
+          {
+            "bottom": 0.6723404255319149,
+            "row_type": "gap",
+            "top": 0.6559270516717325
+          },
+          {
+            "bottom": 0.6851063829787234,
+            "row_type": "subsection-header",
+            "top": 0.6723404255319149
+          },
+          {
+            "bottom": 0.6990881458966566,
+            "row_type": "data",
+            "top": 0.6851063829787234
+          },
+          {
+            "bottom": 0.7142857142857143,
+            "row_type": "gap-with-text",
+            "top": 0.6990881458966566
+          },
+          {
+            "bottom": 0.7264437689969605,
+            "row_type": "gap",
+            "top": 0.7142857142857143
+          },
+          {
+            "bottom": 0.7422492401215806,
+            "row_type": "subsection-header",
+            "top": 0.7264437689969605
+          },
+          {
+            "bottom": 0.7580547112462006,
+            "row_type": "data",
+            "top": 0.7422492401215806
+          },
+          {
+            "bottom": 0.7696048632218845,
+            "row_type": "data",
+            "top": 0.7580547112462006
+          },
+          {
+            "bottom": 0.78419452887538,
+            "row_type": "gap-with-text",
+            "top": 0.7696048632218845
+          },
+          {
+            "bottom": 0.7975683890577507,
+            "row_type": "gap",
+            "top": 0.78419452887538
+          },
+          {
+            "bottom": 0.8133738601823708,
+            "row_type": "subsection-header",
+            "top": 0.7975683890577507
+          },
+          {
+            "bottom": 0.8279635258358663,
+            "row_type": "data",
+            "top": 0.8133738601823708
+          },
+          {
+            "bottom": 0.8395136778115502,
+            "row_type": "gap-with-text",
+            "top": 0.8279635258358663
+          },
+          {
+            "bottom": 0.8528875379939209,
+            "row_type": "gap",
+            "top": 0.8395136778115502
+          },
+          {
+            "bottom": 0.8686930091185411,
+            "row_type": "subsection-header",
+            "top": 0.8528875379939209
+          },
+          {
+            "bottom": 0.8820668693009118,
+            "row_type": "data",
+            "top": 0.8686930091185411
+          },
+          {
+            "bottom": 0.8996960486322189,
+            "row_type": "gap-with-text",
+            "top": 0.8820668693009118
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

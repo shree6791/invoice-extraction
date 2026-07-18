@@ -1,0 +1,819 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.25766747266032863,
+        0.08774846721867863,
+        0.3402532010771006,
+        0.10904663887369771
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "I23998"
+    },
+    {
+      "bbox": [
+        0.37563829787234043,
+        0.25798501036134325,
+        0.4285140700068634,
+        0.2724497200378772
+      ],
+      "fieldtype": "document_id",
+      "page": 1,
+      "text": "I23998"
+    },
+    {
+      "bbox": [
+        0.7047315491564544,
+        0.15590261651473972,
+        0.797227564983239,
+        0.17038537324015268
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "JUNE 30, 1999"
+    },
+    {
+      "bbox": [
+        0.5913138154640876,
+        0.21638942401499392,
+        0.6562812551519481,
+        0.2300202538742061
+      ],
+      "fieldtype": "order_id",
+      "page": 0,
+      "text": "10002617"
+    },
+    {
+      "bbox": [
+        0.37563829787234043,
+        0.24437116595989952,
+        0.45054564172958134,
+        0.25713414508625304
+      ],
+      "fieldtype": "order_id",
+      "page": 1,
+      "text": "100026-17"
+    },
+    {
+      "bbox": [
+        0.5357060916634611,
+        0.7939958392991115,
+        0.616089533989119,
+        0.80336703482732
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Landor Associates"
+    },
+    {
+      "bbox": [
+        0.5357060916634611,
+        0.7927179489998104,
+        0.6623375419025114,
+        0.8216834624506364
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "Landor Associates\n230 Park Ave, South 7th FI.\nNew York, NY 10003-1513"
+    },
+    {
+      "bbox": [
+        0.34465777325932845,
+        0.8029410713942194,
+        0.4228389294938726,
+        0.8114603400562271
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Landor Associates"
+    },
+    {
+      "bbox": [
+        0.16681816934454796,
+        0.12056362104930901,
+        0.3578607593199874,
+        0.1337520328132076
+      ],
+      "fieldtype": "vendor_name",
+      "page": 1,
+      "text": "LANDOR ASSOCIATES"
+    },
+    {
+      "bbox": [
+        0.34465777325932845,
+        0.80336703482732,
+        0.4569743639061384,
+        0.8310546579788447
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "Landor Associates\nP.O. Box 101958\nAtlanta, GA 30392-1958"
+    },
+    {
+      "bbox": [
+        0.20857337936720602,
+        0.1873981123658797,
+        0.32352966436497305,
+        0.1996428753897866
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "PHILIP MORRIS USA"
+    },
+    {
+      "bbox": [
+        0.2092617403552166,
+        0.1873981123658797,
+        0.34486885499330105,
+        0.23265049745423133
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "PHILIP MORRIS USA\n120 PARK AVENUE\n7TH FLOOR\nNEW YORK, NY10017"
+    },
+    {
+      "bbox": [
+        0.3786676389842141,
+        0.21211378113388776,
+        0.47023635895676047,
+        0.22806530907157388
+      ],
+      "fieldtype": "customer_other_name",
+      "page": 1,
+      "text": "Philip Morris"
+    },
+    {
+      "bbox": [
+        0.44246739876458474,
+        0.7360384692331876,
+        0.45440116678105696,
+        0.7509231472748579
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 1,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.8046378122209759,
+        0.533678252359395,
+        0.838584903500538,
+        0.5457427873196472
+      ],
+      "fieldtype": "amount_total_tax",
+      "page": 0,
+      "text": "$0.00"
+    },
+    {
+      "bbox": [
+        0.7587633645458917,
+        0.5592266793340469,
+        0.8404198814075414,
+        0.5727105713484464
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "$30,530.00"
+    },
+    {
+      "bbox": [
+        0.4415494166094715,
+        0.7353296750407271,
+        0.5315116678105697,
+        0.7516319414673184
+      ],
+      "fieldtype": "amount_due",
+      "page": 1,
+      "text": "$30,530.00"
+    },
+    {
+      "bbox": [
+        0.8018853453604708,
+        0.5350976094135423,
+        0.838584903500538,
+        0.5471621443737945
+      ],
+      "fieldtype": "tax_detail_tax",
+      "page": 0,
+      "text": "$0.00"
+    },
+    {
+      "bbox": [
+        0.75784587559239,
+        0.5592266793340469,
+        0.838584903500538,
+        0.5734202498755201
+      ],
+      "fieldtype": "tax_detail_gross",
+      "page": 0,
+      "text": "$30,530.00"
+    },
+    {
+      "bbox": [
+        0.1803505788587722,
+        0.8214638846038419,
+        0.24505651173176682,
+        0.8310467426225516
+      ],
+      "fieldtype": "account_num",
+      "page": 0,
+      "text": "8734-031373"
+    },
+    {
+      "bbox": [
+        0.17966221787076161,
+        0.8124134075861716,
+        0.24299142876773505,
+        0.8214638846038419
+      ],
+      "fieldtype": "bank_num",
+      "page": 0,
+      "text": "053-100-494"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.15080645161290324,
+        0.45539613225202746,
+        0.39838709677419354,
+        0.47223955084217095
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Professional Fee"
+    },
+    {
+      "bbox": [
+        0.7669354838709678,
+        0.45539613225202746,
+        0.8435483870967742,
+        0.47223955084217095
+      ],
+      "fieldtype": "line_item_amount_net",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "$30,530.00"
+    },
+    {
+      "bbox": [
+        0.15080645161290324,
+        0.48284466625077976,
+        0.39838709677419354,
+        0.5003119151590767
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "Out-of-Pockef Expenses (see attachment for detail)"
+    },
+    {
+      "bbox": [
+        0.7669354838709678,
+        0.48284466625077976,
+        0.8435483870967742,
+        0.5003119151590767
+      ],
+      "fieldtype": "line_item_amount_net",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "$0.00"
+    },
+    {
+      "bbox": [
+        0.15080645161290324,
+        0.5071740486587648,
+        0.39838709677419354,
+        0.5258889582033687
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "Travel Expenses (see attachment for detail)"
+    },
+    {
+      "bbox": [
+        0.7669354838709678,
+        0.5071740486587648,
+        0.8435483870967742,
+        0.5258889582033687
+      ],
+      "fieldtype": "line_item_amount_net",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "$0.00"
+    },
+    {
+      "bbox": [
+        0.16693548387096774,
+        0.38006230529595014,
+        0.3443548387096774,
+        0.3956386292834891
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 4,
+      "page": 1,
+      "text": "Creative Director"
+    },
+    {
+      "bbox": [
+        0.4314516129032258,
+        0.38006230529595014,
+        0.47338709677419355,
+        0.3956386292834891
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 4,
+      "page": 1,
+      "text": "4"
+    },
+    {
+      "bbox": [
+        0.5491935483870968,
+        0.38006230529595014,
+        0.5790322580645161,
+        0.3956386292834891
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 4,
+      "page": 1,
+      "text": "325"
+    },
+    {
+      "bbox": [
+        0.6540322580645161,
+        0.38006230529595014,
+        0.7241935483870968,
+        0.3956386292834891
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 4,
+      "page": 1,
+      "text": "1,300.00"
+    },
+    {
+      "bbox": [
+        0.16693548387096774,
+        0.3956386292834891,
+        0.3443548387096774,
+        0.4124610591900312
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 5,
+      "page": 1,
+      "text": "Design Director"
+    },
+    {
+      "bbox": [
+        0.4314516129032258,
+        0.3956386292834891,
+        0.47338709677419355,
+        0.4124610591900312
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 5,
+      "page": 1,
+      "text": "7"
+    },
+    {
+      "bbox": [
+        0.5491935483870968,
+        0.3956386292834891,
+        0.5790322580645161,
+        0.4124610591900312
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 5,
+      "page": 1,
+      "text": "250"
+    },
+    {
+      "bbox": [
+        0.6540322580645161,
+        0.3956386292834891,
+        0.7241935483870968,
+        0.4124610591900312
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 5,
+      "page": 1,
+      "text": "1,750.00"
+    },
+    {
+      "bbox": [
+        0.16693548387096774,
+        0.4124610591900312,
+        0.3443548387096774,
+        0.4261682242990654
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 6,
+      "page": 1,
+      "text": "Senior Project Manager"
+    },
+    {
+      "bbox": [
+        0.4314516129032258,
+        0.4124610591900312,
+        0.47338709677419355,
+        0.4261682242990654
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 6,
+      "page": 1,
+      "text": "15"
+    },
+    {
+      "bbox": [
+        0.5491935483870968,
+        0.4124610591900312,
+        0.5790322580645161,
+        0.4261682242990654
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 6,
+      "page": 1,
+      "text": "200"
+    },
+    {
+      "bbox": [
+        0.6540322580645161,
+        0.4124610591900312,
+        0.7241935483870968,
+        0.4261682242990654
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 6,
+      "page": 1,
+      "text": "3,000.00"
+    },
+    {
+      "bbox": [
+        0.16693548387096774,
+        0.4261682242990654,
+        0.3443548387096774,
+        0.44174454828660437
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 7,
+      "page": 1,
+      "text": "Designer"
+    },
+    {
+      "bbox": [
+        0.4314516129032258,
+        0.4261682242990654,
+        0.47338709677419355,
+        0.44174454828660437
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 7,
+      "page": 1,
+      "text": "158.5"
+    },
+    {
+      "bbox": [
+        0.5491935483870968,
+        0.4261682242990654,
+        0.5790322580645161,
+        0.44174454828660437
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 7,
+      "page": 1,
+      "text": "150"
+    },
+    {
+      "bbox": [
+        0.6540322580645161,
+        0.4261682242990654,
+        0.7241935483870968,
+        0.44174454828660437
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 7,
+      "page": 1,
+      "text": "23,775.00"
+    },
+    {
+      "bbox": [
+        0.16693548387096774,
+        0.44174454828660437,
+        0.3443548387096774,
+        0.45669781931464176
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 8,
+      "page": 1,
+      "text": "Financial Analyst"
+    },
+    {
+      "bbox": [
+        0.4314516129032258,
+        0.44174454828660437,
+        0.47338709677419355,
+        0.45669781931464176
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 8,
+      "page": 1,
+      "text": "2"
+    },
+    {
+      "bbox": [
+        0.5491935483870968,
+        0.44174454828660437,
+        0.5790322580645161,
+        0.45669781931464176
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 8,
+      "page": 1,
+      "text": "150"
+    },
+    {
+      "bbox": [
+        0.6540322580645161,
+        0.44174454828660437,
+        0.7241935483870968,
+        0.45669781931464176
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 8,
+      "page": 1,
+      "text": "600.00"
+    },
+    {
+      "bbox": [
+        0.16693548387096774,
+        0.45669781931464176,
+        0.3443548387096774,
+        0.4747663551401869
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 9,
+      "page": 1,
+      "text": "Project Mgt. Coordinator"
+    },
+    {
+      "bbox": [
+        0.4314516129032258,
+        0.45669781931464176,
+        0.47338709677419355,
+        0.4747663551401869
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 9,
+      "page": 1,
+      "text": "2"
+    },
+    {
+      "bbox": [
+        0.5491935483870968,
+        0.45669781931464176,
+        0.5790322580645161,
+        0.4747663551401869
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 9,
+      "page": 1,
+      "text": "100"
+    },
+    {
+      "bbox": [
+        0.6540322580645161,
+        0.45669781931464176,
+        0.7241935483870968,
+        0.4747663551401869
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 9,
+      "page": 1,
+      "text": "200.00"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.16602362976762428,
+        0.363916115796672,
+        0.2226762427688989,
+        0.37911252944305146
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 3,
+      "page": 1,
+      "text": "TITLE"
+    },
+    {
+      "bbox": [
+        0.41859986273164035,
+        0.3651318288883823,
+        0.4846945778997941,
+        0.37911252944305146
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 3,
+      "page": 1,
+      "text": "HOURS"
+    },
+    {
+      "bbox": [
+        0.538199823512109,
+        0.3657396854342375,
+        0.590131385429944,
+        0.37850467289719625
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 3,
+      "page": 1,
+      "text": "RATE"
+    },
+    {
+      "bbox": [
+        0.6452103147367388,
+        0.3651318288883823,
+        0.7341234434748505,
+        0.37911252944305146
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 3,
+      "page": 1,
+      "text": "BILLABLE"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 668,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "yqdv0152",
+    "page_count": 3,
+    "page_sizes_at_200dpi": [
+      [
+        1706,
+        2205
+      ],
+      [
+        1702,
+        2201
+      ],
+      [
+        1704,
+        2203
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.15080645161290324,
+          0.42732376793512167,
+          0.8435483870967742,
+          0.5814098565190269
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_description",
+            "left": 0.15080645161290324,
+            "right": 0.39838709677419354
+          },
+          {
+            "column_type": "line_item_amount_net",
+            "left": 0.7669354838709678,
+            "right": 0.8435483870967742
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": true,
+        "rows": [
+          {
+            "bottom": 0.45539613225202746,
+            "row_type": "gap-with-text",
+            "top": 0.42732376793512167
+          },
+          {
+            "bottom": 0.47223955084217095,
+            "row_type": "data",
+            "top": 0.45539613225202746
+          },
+          {
+            "bottom": 0.48284466625077976,
+            "row_type": "gap-with-text",
+            "top": 0.47223955084217095
+          },
+          {
+            "bottom": 0.5003119151590767,
+            "row_type": "data",
+            "top": 0.48284466625077976
+          },
+          {
+            "bottom": 0.5071740486587648,
+            "row_type": "gap",
+            "top": 0.5003119151590767
+          },
+          {
+            "bottom": 0.5258889582033687,
+            "row_type": "data",
+            "top": 0.5071740486587648
+          },
+          {
+            "bottom": 0.5315034310667498,
+            "row_type": "gap",
+            "top": 0.5258889582033687
+          },
+          {
+            "bottom": 0.5814098565190269,
+            "row_type": "footer",
+            "top": 0.5315034310667498
+          }
+        ],
+        "table_border_type": "row_borders",
+        "table_structure": "normal"
+      },
+      "1": {
+        "bbox": [
+          0.16693548387096774,
+          0.3632398753894081,
+          0.739516129032258,
+          0.5077881619937694
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_description",
+            "left": 0.16693548387096774,
+            "right": 0.3443548387096774
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.4314516129032258,
+            "right": 0.47338709677419355
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.5491935483870968,
+            "right": 0.5790322580645161
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.6540322580645161,
+            "right": 0.7241935483870968
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": true,
+        "rows": [
+          {
+            "bottom": 0.38006230529595014,
+            "row_type": "header",
+            "top": 0.3632398753894081
+          },
+          {
+            "bottom": 0.3956386292834891,
+            "row_type": "data",
+            "top": 0.38006230529595014
+          },
+          {
+            "bottom": 0.4124610591900312,
+            "row_type": "data",
+            "top": 0.3956386292834891
+          },
+          {
+            "bottom": 0.4261682242990654,
+            "row_type": "data",
+            "top": 0.4124610591900312
+          },
+          {
+            "bottom": 0.44174454828660437,
+            "row_type": "data",
+            "top": 0.4261682242990654
+          },
+          {
+            "bottom": 0.45669781931464176,
+            "row_type": "data",
+            "top": 0.44174454828660437
+          },
+          {
+            "bottom": 0.4747663551401869,
+            "row_type": "data",
+            "top": 0.45669781931464176
+          },
+          {
+            "bottom": 0.4866043613707165,
+            "row_type": "gap",
+            "top": 0.4747663551401869
+          },
+          {
+            "bottom": 0.5077881619937694,
+            "row_type": "footer",
+            "top": 0.4866043613707165
+          }
+        ],
+        "table_border_type": "row_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

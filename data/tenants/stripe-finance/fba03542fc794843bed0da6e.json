@@ -1,0 +1,339 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.7914518687842241,
+        0.0708556925060809,
+        0.8988485355077531,
+        0.08566135959690378
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "16-05-057"
+    },
+    {
+      "bbox": [
+        0.7941880895924668,
+        0.08777645489559276,
+        0.9077412531345421,
+        0.10099580051239891
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "05/31/2016"
+    },
+    {
+      "bbox": [
+        0.7921359239862847,
+        0.1173877890772385,
+        0.8844833762644786,
+        0.1311359085187169
+      ],
+      "fieldtype": "order_id",
+      "page": 0,
+      "text": "0672011"
+    },
+    {
+      "bbox": [
+        0.6717422084236024,
+        0.04230190597377964,
+        0.7681939919141605,
+        0.06609672808403069
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "WYQE"
+    },
+    {
+      "bbox": [
+        0.7921359239862847,
+        0.10363966963576013,
+        0.8407038433325942,
+        0.11580146760322177
+      ],
+      "fieldtype": "customer_id",
+      "page": 0,
+      "text": "0672"
+    },
+    {
+      "bbox": [
+        0.13202265399771412,
+        0.17925432656389123,
+        0.4856791934630934,
+        0.1940599936547141
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "COMITE AMIGOS HUMBERTO GONZALE"
+    },
+    {
+      "bbox": [
+        0.13202265399771412,
+        0.18031187421323572,
+        0.4856791934630934,
+        0.2395345425765272
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "COMITE AMIGOS HUMBERTO GONZALE\nCOSTA ESMERALDA EDIFICIO G\nAPTO. 7102\nCEIBA, PR 00735"
+    },
+    {
+      "bbox": [
+        0.8270227392913801,
+        0.7196611753789262,
+        0.8858514866685999,
+        0.7328805209957323
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "25.00"
+    },
+    {
+      "bbox": [
+        0.8277067944934409,
+        0.7963333799564019,
+        0.8879032258064516,
+        0.809552725573208
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "25.00"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.03870967741935484,
+        0.3478802992518703,
+        0.13064516129032258,
+        0.3634663341645885
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "05/31/16"
+    },
+    {
+      "bbox": [
+        0.14677419354838708,
+        0.3478802992518703,
+        0.23870967741935484,
+        0.3634663341645885
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "05/31/16"
+    },
+    {
+      "bbox": [
+        0.31048387096774194,
+        0.3478802992518703,
+        0.32016129032258067,
+        0.3634663341645885
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "1"
+    },
+    {
+      "bbox": [
+        0.3911290322580645,
+        0.3478802992518703,
+        0.5508064516129032,
+        0.3634663341645885
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": ": 30 WYQE SPOT"
+    },
+    {
+      "bbox": [
+        0.6491935483870968,
+        0.3478802992518703,
+        0.7080645161290322,
+        0.3634663341645885
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "25.00"
+    },
+    {
+      "bbox": [
+        0.7467741935483871,
+        0.3478802992518703,
+        0.8887096774193548,
+        0.3634663341645885
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "25.00"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.1080807219255898,
+        0.31990816392670857,
+        0.16827757970693094,
+        0.331541188069498
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Dates"
+    },
+    {
+      "bbox": [
+        0.11081694273383258,
+        0.31990816392670857,
+        0.16827757970693094,
+        0.3320699618941702
+      ],
+      "fieldtype": "line_item_date",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Dates"
+    },
+    {
+      "bbox": [
+        0.25173231435833576,
+        0.3066888183099024,
+        0.36802169870865387,
+        0.3325987357188424
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "# of\nBroadcasts"
+    },
+    {
+      "bbox": [
+        0.41522150765084187,
+        0.31990816392670857,
+        0.5458760512444345,
+        0.3336562833681869
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Description"
+    },
+    {
+      "bbox": [
+        0.6341191723102642,
+        0.3054862842892768,
+        0.7080645161290322,
+        0.3329177057356609
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Unit\nAmount"
+    },
+    {
+      "bbox": [
+        0.7770867095409494,
+        0.32043693775138077,
+        0.8858514866685999,
+        0.3329177057356609
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Extension"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 104,
+    "currency": "other",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "cffadfc6-415b-4ace-8127-e8559bc5db6a",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1700,
+        2200
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.03870967741935484,
+          0.3054862842892768,
+          0.8887096774193548,
+          0.816708229426434
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_date",
+            "left": 0.03870967741935484,
+            "right": 0.13064516129032258
+          },
+          {
+            "column_type": "line_item_date",
+            "left": 0.14677419354838708,
+            "right": 0.23870967741935484
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.31048387096774194,
+            "right": 0.32016129032258067
+          },
+          {
+            "column_type": "line_item_description",
+            "left": 0.3911290322580645,
+            "right": 0.5508064516129032
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.6491935483870968,
+            "right": 0.7080645161290322
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.7467741935483871,
+            "right": 0.8887096774193548
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.3329177057356609,
+            "row_type": "header",
+            "top": 0.3054862842892768
+          },
+          {
+            "bottom": 0.3478802992518703,
+            "row_type": "gap",
+            "top": 0.3329177057356609
+          },
+          {
+            "bottom": 0.3634663341645885,
+            "row_type": "data",
+            "top": 0.3478802992518703
+          },
+          {
+            "bottom": 0.720074812967581,
+            "row_type": "gap",
+            "top": 0.3634663341645885
+          },
+          {
+            "bottom": 0.816708229426434,
+            "row_type": "footer",
+            "top": 0.720074812967581
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "pif"
+  }
+}

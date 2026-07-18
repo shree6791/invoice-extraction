@@ -1,0 +1,254 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.8420719537367155,
+        0.17026517154446305,
+        0.881063100254175,
+        0.1797831003885635
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "42230"
+    },
+    {
+      "bbox": [
+        0.650536497159721,
+        0.16973639771979082,
+        0.7100492997390013,
+        0.1797831003885635
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "03-31-20"
+    },
+    {
+      "bbox": [
+        0.06361713379164463,
+        0.05975144218796375,
+        0.3748622507292608,
+        0.08830522872026501
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "KVRE-FM 92.9\nCADDO BROADCASTING COMPANY"
+    },
+    {
+      "bbox": [
+        0.06498524419576601,
+        0.05975144218796375,
+        0.4076969004281742,
+        0.1195028843759275
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "KVRE-FM 92.9\nCADDO BROADCASTING COMPANY\nP.O. BOX 8439\nHOT SPRINGS VILLAGE AR 71910"
+    },
+    {
+      "bbox": [
+        0.8783268794459322,
+        0.20146282720012557,
+        0.9169354838709678,
+        0.21045198221955375
+      ],
+      "fieldtype": "customer_id",
+      "page": 0,
+      "text": "10575"
+    },
+    {
+      "bbox": [
+        0.11355316354207536,
+        0.16973639771979082,
+        0.3249262209788301,
+        0.1797831003885635
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "JOSH NEWTON FOR CIRCUIT JUDGE"
+    },
+    {
+      "bbox": [
+        0.11286910834001466,
+        0.16973639771979082,
+        0.3242421657767694,
+        0.21045198221955375
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "JOSH NEWTON FOR CIRCUIT JUDGE\n204 SUNCREST STREET\nBRYANT, AR 72022"
+    },
+    {
+      "bbox": [
+        0.6642176012009349,
+        0.2009340533754533,
+        0.8728544378294468,
+        0.21045198221955375
+      ],
+      "fieldtype": "customer_other_name",
+      "page": 0,
+      "text": "JOSH NEWTON FOR CIRCUIT JUDGE"
+    },
+    {
+      "bbox": [
+        0.8324951809078658,
+        0.4404685959519805,
+        0.8434400641408369,
+        0.4542167153934589
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.9029528667201173,
+        0.4256629288611577,
+        0.975462718138551,
+        0.43782472682861934
+      ],
+      "fieldtype": "amount_total_net",
+      "page": 0,
+      "text": "207.00"
+    },
+    {
+      "bbox": [
+        0.901584756315996,
+        0.4409973697766528,
+        0.9727264973303082,
+        0.45368794156878667
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "207.00"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.02903225806451613,
+        0.3478802992518703,
+        0.056451612903225805,
+        0.3622194513715711
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "18"
+    },
+    {
+      "bbox": [
+        0.18225806451612903,
+        0.3478802992518703,
+        0.2435483870967742,
+        0.3622194513715711
+      ],
+      "fieldtype": "line_item_unit_price_net",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "11.50"
+    },
+    {
+      "bbox": [
+        0.8298387096774194,
+        0.3478802992518703,
+        0.8435483870967742,
+        0.3622194513715711
+      ],
+      "fieldtype": "line_item_currency",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.9008064516129032,
+        0.3478802992518703,
+        0.9766129032258064,
+        0.3622194513715711
+      ],
+      "fieldtype": "line_item_amount_net",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "207.00"
+    }
+  ],
+  "line_item_headers": [],
+  "metadata": {
+    "cluster_id": 1093,
+    "currency": "usd",
+    "document_type": "tax_invoice",
+    "language": "eng",
+    "original_filename": "cdaa3fd6-b21c-4593-8f1e-d5902267094a",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1700,
+        2200
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.02903225806451613,
+          0.3478802992518703,
+          0.9766129032258064,
+          0.456359102244389
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.02903225806451613,
+            "right": 0.056451612903225805
+          },
+          {
+            "column_type": "",
+            "left": 0.07419354838709677,
+            "right": 0.14919354838709678
+          },
+          {
+            "column_type": "line_item_unit_price_net",
+            "left": 0.18225806451612903,
+            "right": 0.2435483870967742
+          },
+          {
+            "column_type": "line_item_currency",
+            "left": 0.8298387096774194,
+            "right": 0.8435483870967742
+          },
+          {
+            "column_type": "line_item_amount_net",
+            "left": 0.9008064516129032,
+            "right": 0.9766129032258064
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.3622194513715711,
+            "row_type": "data",
+            "top": 0.3478802992518703
+          },
+          {
+            "bottom": 0.4102244389027431,
+            "row_type": "up-merge",
+            "top": 0.3622194513715711
+          },
+          {
+            "bottom": 0.42581047381546133,
+            "row_type": "gap",
+            "top": 0.4102244389027431
+          },
+          {
+            "bottom": 0.456359102244389,
+            "row_type": "footer",
+            "top": 0.42581047381546133
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "structured_rows"
+      }
+    },
+    "source": "pif"
+  }
+}

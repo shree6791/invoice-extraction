@@ -1,0 +1,262 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.8309656928751245,
+        0.10983886541810732,
+        0.8649288683332358,
+        0.12436301291141075
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "1612"
+    },
+    {
+      "bbox": [
+        0.7080645161290322,
+        0.11074662463643878,
+        0.7743604004449388,
+        0.1279896574014221
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "6/18/1999"
+    },
+    {
+      "bbox": [
+        0.07096774193548387,
+        0.039941405606584476,
+        0.25585592178443883,
+        0.05900434919154525
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Indiana Black Expo Inc."
+    },
+    {
+      "bbox": [
+        0.07471898600784498,
+        0.06717418215652844,
+        0.28415856799953165,
+        0.1025767916714556
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "3145 N. Meridian Street\nIndianapolis, Indiana 46208"
+    },
+    {
+      "bbox": [
+        0.10048579217975225,
+        0.18663156917184645,
+        0.1988486450881013,
+        0.2121586834962631
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "Philip Morris\nYvette Robinson"
+    },
+    {
+      "bbox": [
+        0.1019010850273544,
+        0.2127259527034724,
+        0.22927744131154743,
+        0.23938760544230758
+      ],
+      "fieldtype": "customer_billing_address",
+      "page": 0,
+      "text": "120 Park Avenue\nNew York, NY 10017"
+    },
+    {
+      "bbox": [
+        0.8166239730664374,
+        0.8775654635527247,
+        0.8272386694234535,
+        0.8906126553185377
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.8153225806451613,
+        0.8775654635527247,
+        0.8831427369037381,
+        0.892049127343245
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "$15,000.00"
+    },
+    {
+      "bbox": [
+        0.8153225806451613,
+        0.8769981943455155,
+        0.881727444056136,
+        0.892049127343245
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "$15,000.00"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.06854838709677419,
+        0.4078862314156432,
+        0.22741935483870968,
+        0.4240465416936005
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "Corporate Sponsor Package"
+    },
+    {
+      "bbox": [
+        0.5717741935483871,
+        0.4078862314156432,
+        0.6338709677419355,
+        0.4240465416936005
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "15,000.00"
+    },
+    {
+      "bbox": [
+        0.8266129032258065,
+        0.4078862314156432,
+        0.9024193548387097,
+        0.4240465416936005
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "15,000.00"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.18453325332240503,
+        0.3848899085725413,
+        0.28189435630232423,
+        0.4012295745025077
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "DESCRIPTION"
+    },
+    {
+      "bbox": [
+        0.5637887126046485,
+        0.3848899085725413,
+        0.609072946548797,
+        0.40213733372083915
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "RATE"
+    },
+    {
+      "bbox": [
+        0.8003988349628242,
+        0.3848899085725413,
+        0.8694572917276506,
+        0.40213733372083915
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "AMOUNT"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 147,
+    "currency": "usd",
+    "document_type": "sales_order",
+    "language": "eng",
+    "original_filename": "smln0009",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        1692,
+        2112
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.06854838709677419,
+          0.37879767291531996,
+          0.9024193548387097,
+          0.9036845507433743
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_description",
+            "left": 0.06854838709677419,
+            "right": 0.22741935483870968
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.5717741935483871,
+            "right": 0.6338709677419355
+          },
+          {
+            "column_type": "",
+            "left": 0.6508064516129032,
+            "right": 0.771774193548387
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.8266129032258065,
+            "right": 0.9024193548387097
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.4078862314156432,
+            "row_type": "header",
+            "top": 0.37879767291531996
+          },
+          {
+            "bottom": 0.4240465416936005,
+            "row_type": "data",
+            "top": 0.4078862314156432
+          },
+          {
+            "bottom": 0.7220426632191338,
+            "row_type": "gap",
+            "top": 0.4240465416936005
+          },
+          {
+            "bottom": 0.8248222365869424,
+            "row_type": "gap-with-text",
+            "top": 0.7220426632191338
+          },
+          {
+            "bottom": 0.8661926308985133,
+            "row_type": "gap",
+            "top": 0.8248222365869424
+          },
+          {
+            "bottom": 0.9036845507433743,
+            "row_type": "footer",
+            "top": 0.8661926308985133
+          }
+        ],
+        "table_border_type": "no_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "ucsf"
+  }
+}

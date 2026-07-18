@@ -1,0 +1,439 @@
+{
+  "field_extractions": [
+    {
+      "bbox": [
+        0.7169120536928983,
+        0.08999432999432999,
+        0.7605375336336426,
+        0.10593082593082594
+      ],
+      "fieldtype": "document_id",
+      "page": 0,
+      "text": "17714005"
+    },
+    {
+      "bbox": [
+        0.7140036883635155,
+        0.1274919674919675,
+        0.7525395289778395,
+        0.14436590436590435
+      ],
+      "fieldtype": "date_issue",
+      "page": 0,
+      "text": "10/26/18"
+    },
+    {
+      "bbox": [
+        0.0543234276840545,
+        0.15383204297231448,
+        0.14599421190089645,
+        0.1698714029030771
+      ],
+      "fieldtype": "vendor_name",
+      "page": 0,
+      "text": "Salem Radio Network"
+    },
+    {
+      "bbox": [
+        0.053757558645678924,
+        0.17132952653314645,
+        0.13411096209500953,
+        0.22528010084571168
+      ],
+      "fieldtype": "vendor_address",
+      "page": 0,
+      "text": "6400 N Beltline Rd\nSuite 210\nIrving, TX 75063"
+    },
+    {
+      "bbox": [
+        0.5429513423213571,
+        0.20195012276460236,
+        0.6363197336533257,
+        0.21871854451039968
+      ],
+      "fieldtype": "customer_billing_name",
+      "page": 0,
+      "text": "Interactive Media, LLC"
+    },
+    {
+      "bbox": [
+        0.8287152067010188,
+        0.5395057431256526,
+        0.8360715041999011,
+        0.5548160412413805
+      ],
+      "fieldtype": "currency_code_amount_due",
+      "page": 0,
+      "text": "$"
+    },
+    {
+      "bbox": [
+        0.8287152067010188,
+        0.538776681310618,
+        0.8717212536175619,
+        0.5548160412413805
+      ],
+      "fieldtype": "amount_total_gross",
+      "page": 0,
+      "text": "$1,938.00"
+    },
+    {
+      "bbox": [
+        0.8292810757393944,
+        0.5395057431256526,
+        0.8717212536175619,
+        0.5548160412413805
+      ],
+      "fieldtype": "amount_due",
+      "page": 0,
+      "text": "$1,938.00"
+    }
+  ],
+  "line_item_extractions": [
+    {
+      "bbox": [
+        0.04838709677419355,
+        0.3212058212058212,
+        0.05806451612903226,
+        0.3388773388773389
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "7"
+    },
+    {
+      "bbox": [
+        0.07580645161290323,
+        0.3212058212058212,
+        0.12096774193548387,
+        0.3388773388773389
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "WGUL-AM"
+    },
+    {
+      "bbox": [
+        0.8104838709677419,
+        0.3212058212058212,
+        0.8225806451612904,
+        0.3388773388773389
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "30"
+    },
+    {
+      "bbox": [
+        0.8733870967741936,
+        0.3212058212058212,
+        0.896774193548387,
+        0.3388773388773389
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "49.00"
+    },
+    {
+      "bbox": [
+        0.9209677419354839,
+        0.3212058212058212,
+        0.9443548387096774,
+        0.3388773388773389
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 1,
+      "page": 0,
+      "text": "1470"
+    },
+    {
+      "bbox": [
+        0.04838709677419355,
+        0.3596673596673597,
+        0.05806451612903226,
+        0.3762993762993763
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "7"
+    },
+    {
+      "bbox": [
+        0.07580645161290323,
+        0.3596673596673597,
+        0.12096774193548387,
+        0.3762993762993763
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "WGUL-AM"
+    },
+    {
+      "bbox": [
+        0.8104838709677419,
+        0.3596673596673597,
+        0.8225806451612904,
+        0.3762993762993763
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "10"
+    },
+    {
+      "bbox": [
+        0.8733870967741936,
+        0.3596673596673597,
+        0.896774193548387,
+        0.3762993762993763
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "49.00"
+    },
+    {
+      "bbox": [
+        0.9209677419354839,
+        0.3596673596673597,
+        0.9443548387096774,
+        0.3762993762993763
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 2,
+      "page": 0,
+      "text": "490"
+    },
+    {
+      "bbox": [
+        0.04838709677419355,
+        0.39604989604989604,
+        0.05806451612903226,
+        0.41476091476091476
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "8"
+    },
+    {
+      "bbox": [
+        0.07580645161290323,
+        0.39604989604989604,
+        0.12096774193548387,
+        0.41476091476091476
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "WGUL-AM"
+    },
+    {
+      "bbox": [
+        0.8104838709677419,
+        0.39604989604989604,
+        0.8225806451612904,
+        0.41476091476091476
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "10"
+    },
+    {
+      "bbox": [
+        0.8733870967741936,
+        0.39604989604989604,
+        0.896774193548387,
+        0.41476091476091476
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "32.00"
+    },
+    {
+      "bbox": [
+        0.9209677419354839,
+        0.39604989604989604,
+        0.9443548387096774,
+        0.41476091476091476
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 3,
+      "page": 0,
+      "text": "320"
+    }
+  ],
+  "line_item_headers": [
+    {
+      "bbox": [
+        0.052769651243359764,
+        0.28584353584353583,
+        0.07082242666871968,
+        0.31806806806806803
+      ],
+      "fieldtype": "line_item_position",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Line\n#"
+    },
+    {
+      "bbox": [
+        0.08239471860805297,
+        0.28584353584353583,
+        0.1097053275848795,
+        0.29777854777854773
+      ],
+      "fieldtype": "line_item_description",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Vehicle"
+    },
+    {
+      "bbox": [
+        0.7957107937485565,
+        0.28584353584353583,
+        0.8188553776272229,
+        0.31806806806806803
+      ],
+      "fieldtype": "line_item_quantity",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Total\nUnits"
+    },
+    {
+      "bbox": [
+        0.8681533412887827,
+        0.2852467852467852,
+        0.8889834667795826,
+        0.31747131747131746
+      ],
+      "fieldtype": "line_item_unit_price_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Unit\nRate"
+    },
+    {
+      "bbox": [
+        0.900555758718916,
+        0.28465003465003463,
+        0.9380499846023558,
+        0.31806806806806803
+      ],
+      "fieldtype": "line_item_amount_gross",
+      "line_item_id": 0,
+      "page": 0,
+      "text": "Extended\nTotal"
+    }
+  ],
+  "metadata": {
+    "cluster_id": 401,
+    "currency": "usd",
+    "document_type": "order",
+    "language": "eng",
+    "original_filename": "4f394335-faf4-4510-ba5a-719cf9a6fadc",
+    "page_count": 1,
+    "page_sizes_at_200dpi": [
+      [
+        2339,
+        1815
+      ]
+    ],
+    "page_to_table_grid": {
+      "0": {
+        "bbox": [
+          0.04838709677419355,
+          0.2806652806652807,
+          0.9443548387096774,
+          0.4553014553014553
+        ],
+        "columns": [
+          {
+            "column_type": "line_item_position",
+            "left": 0.04838709677419355,
+            "right": 0.05806451612903226
+          },
+          {
+            "column_type": "line_item_description",
+            "left": 0.07580645161290323,
+            "right": 0.12096774193548387
+          },
+          {
+            "column_type": "line_item_quantity",
+            "left": 0.8104838709677419,
+            "right": 0.8225806451612904
+          },
+          {
+            "column_type": "",
+            "left": 0.832258064516129,
+            "right": 0.8451612903225807
+          },
+          {
+            "column_type": "line_item_unit_price_gross",
+            "left": 0.8733870967741936,
+            "right": 0.896774193548387
+          },
+          {
+            "column_type": "line_item_amount_gross",
+            "left": 0.9209677419354839,
+            "right": 0.9443548387096774
+          }
+        ],
+        "missing_columns": false,
+        "missing_second_table_on_page": false,
+        "rows": [
+          {
+            "bottom": 0.3212058212058212,
+            "row_type": "header",
+            "top": 0.2806652806652807
+          },
+          {
+            "bottom": 0.3388773388773389,
+            "row_type": "data",
+            "top": 0.3212058212058212
+          },
+          {
+            "bottom": 0.3596673596673597,
+            "row_type": "up-merge",
+            "top": 0.3388773388773389
+          },
+          {
+            "bottom": 0.3762993762993763,
+            "row_type": "data",
+            "top": 0.3596673596673597
+          },
+          {
+            "bottom": 0.39604989604989604,
+            "row_type": "up-merge",
+            "top": 0.3762993762993763
+          },
+          {
+            "bottom": 0.41476091476091476,
+            "row_type": "data",
+            "top": 0.39604989604989604
+          },
+          {
+            "bottom": 0.43451143451143454,
+            "row_type": "up-merge",
+            "top": 0.41476091476091476
+          },
+          {
+            "bottom": 0.4553014553014553,
+            "row_type": "footer",
+            "top": 0.43451143451143454
+          }
+        ],
+        "table_border_type": "column_borders",
+        "table_structure": "normal"
+      }
+    },
+    "source": "pif"
+  }
+}
