@@ -17,7 +17,7 @@ Failed grounding → `needs_review` (value kept, bbox cleared). Responses expose
 |---|---|
 | [`docs/PRODUCT.md`](docs/PRODUCT.md) | Principles, KPIs, competitive frame, talk track |
 | [`docs/EXTRACTION.md`](docs/EXTRACTION.md) | Pipeline, schema, grounding, chat, eval, model roadmap |
-| [`docs/SYSTEM.md`](docs/SYSTEM.md) | Scale, capacity, tenancy, swap map, phases |
+| [`docs/SYSTEM.md`](docs/SYSTEM.md) | Scale, capacity, tenancy, swap map, operability |
 
 ## Setup
 

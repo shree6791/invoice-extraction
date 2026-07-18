@@ -142,10 +142,10 @@ Retry budget is bounded — unbounded retries against a down backend amplify the
 Model strategy (classify -> LoRA per vertical, DocILE cluster seeding, escalation cascade) is covered in [`EXTRACTION.md`](EXTRACTION.md#model-strategy). This section covers the infra cost of that strategy.
 
 - **Adapter footprint:** the shared base model dominates GPU memory; a LoRA adapter is megabytes, not the multi-GB size of a full model copy. N adapters loaded alongside one base model cost close to base-model GPU sizing, not N x base-model sizing.
-- **Routing:** the classify step (see EXTRACTION.md) resolves a request to a `cluster_id`; the extract pod loads or already holds the matching adapter and serves the request against base model + adapter.
+- **Routing:** the classify step (see [`EXTRACTION.md`](EXTRACTION.md#model-strategy)) resolves a request to a `cluster_id`; the extract pod loads or already holds the matching adapter and serves the request against base model + adapter.
 - **Batching:** requests routed to the same adapter batch together for GPU throughput. Requests spanning different adapters either pay an adapter-switch cost or queue separately per adapter.
-- **Cold start:** a new vertical or layout cluster with no trained adapter falls back to the Claude escalation path (see EXTRACTION.md#escalation) until enough confirmed extractions accumulate to train a patch.
-- **Capacity math:** the GPU sketch above (Capacity section) sizes the shared base model at the operating point; adapters run at the LoRA fast-path service time (~50-200 ms), not the Claude/self-hosted-LLM service time.
+- **Cold start:** a new vertical or layout cluster with no trained adapter falls back to the Claude escalation path (see [`EXTRACTION.md` escalation](EXTRACTION.md#escalation-cost-control)) until enough confirmed extractions accumulate to train a patch.
+- **Capacity math:** the GPU sketch above ([Capacity](#capacity)) sizes the shared base model at the operating point; adapters run at the LoRA fast-path service time (~50-200 ms), not the Claude/self-hosted-LLM service time.
 
 ---
 
@@ -174,8 +174,8 @@ Dashboard KPIs (needs_review rate, cost/doc, IoU pass rate, coverage, lag) are c
 - Aggregation runs per-tenant, per-minute/hour/day as jobs complete: extraction count, needs_review count, mean IoU, cost, latency.
 - A dashboard query for "last 2 hours" reads 120 minute-bucket rows; a query for "last 12 months" reads 12 month-bucket rows. Never a full table scan.
 - **Storage:** Redis/time-series store for hot rollups (24-48h) — low-latency KV fits the small, high-write-rate key space better than relational joins. Older buckets roll into the warehouse tier's SQL-queryable store, which fits ad-hoc analytical queries better.
-- **Sharding:** rollup keys are `(tenant_id, granularity, time_bucket)`, sharded by `tenant_id`, matching the DB shard key (see Partitioning & sharding) — a dashboard load for one tenant never crosses shards.
-- Backs the "Grounding dashboards" roadmap item in `PRODUCT.md`.
+- **Sharding:** rollup keys are `(tenant_id, granularity, time_bucket)`, sharded by `tenant_id`, matching the DB shard key (see [Partitioning & sharding](#partitioning--sharding)) — a dashboard load for one tenant never crosses shards.
+- Backs the "Grounding dashboards" roadmap item in [`PRODUCT.md`](PRODUCT.md#roadmap-product).
 
 ---
 
@@ -223,7 +223,7 @@ A tenant is one customer of the extraction API. Extraction code is identical acr
 | Professional | Schema-per-tenant |
 | Enterprise | DB-per-tenant (silo) |
 
-Region and shard are separate axes and are not conflated: region is a residency boundary, fixed at signup; shard is a load-balancing boundary, assigned via an explicit lookup table (see Partitioning & sharding).
+Region and shard are separate axes and are not conflated: region is a residency boundary, fixed at signup; shard is a load-balancing boundary, assigned via an explicit lookup table (see [Partitioning & sharding](#partitioning--sharding)).
 
 Noisy-neighbor protection layers: edge token bucket, then Kafka partition fairness (`tenant_id` key), then a per-tenant concurrency semaphore.
 
@@ -257,12 +257,12 @@ An auto-fix reports the steps taken; otherwise the incident routes to a human ch
 | Bboxes in the LLM prompt? | Non-deterministic; breaks audit. Ground from parsed spans instead. |
 | F1 only KPI? | No — F1, IoU pass@0.5, coverage, review rate, cost/doc, lag, and DLQ depth together. |
 | ADE vs. build? | Compare miss-cost x volume against API spend, on the same DocILE bake-off. |
-| Does DAU math justify our scale? | Order-of-magnitude ceiling only — 10M DAU, not 100M. Load is tenant-concentrated, not user-concentrated. DAU math applied directly would mis-shape sharding and fairness design (see Demand derivation). |
-| What if the LLM backend is down mid-extraction? | Bounded retry, then DLQ, then alert — not unbounded retry (amplifies the outage) or silent drop (loses the job). |
-| How do dashboards stay fast at 4M docs/day? | Pre-computed rollups, sharded by tenant; never a live scan of raw job records. |
-| Why S3+Athena for the warehouse, not Redshift/Snowflake? | Query pattern is low-frequency and partition-scoped; a managed warehouse adds ETL and cost without a matching latency requirement at this stage. |
-| Why no phase-numbered rollout plan? | Component choices states, per component, what changes and why. A separate phase table would re-sequence the same trade-offs without adding information. |
-| How does serving cost scale with more industry verticals? | Sub-linearly — new verticals add small LoRA adapters on the shared base model, not new model deployments (see Model serving & adapter scaling). |
+| Does DAU math justify our scale? | Order-of-magnitude ceiling only — 10M DAU, not 100M. Load is tenant-concentrated, not user-concentrated. DAU math applied directly would mis-shape sharding and fairness design (see [Demand derivation](#demand-derivation)). |
+| What if the LLM backend is down mid-extraction? | Bounded retry, then DLQ, then alert — not unbounded retry (amplifies the outage) or silent drop (loses the job). See [Extraction pipeline](#extraction-pipeline-failure-durability-and-storage). |
+| How do dashboards stay fast at 4M docs/day? | Pre-computed rollups, sharded by tenant; never a live scan of raw job records. See [Metrics rollups](#metrics-rollups-dashboard-read-path). |
+| Why S3+Athena for the warehouse, not Redshift/Snowflake? | Query pattern is low-frequency and partition-scoped; a managed warehouse adds ETL and cost without a matching latency requirement at this stage. See [Warehouse tier](#warehouse-tier-long-term--audit). |
+| Why no phase-numbered rollout plan? | [Component choices](#component-choices) states, per component, what changes and why. A separate phase table would re-sequence the same trade-offs without adding information. |
+| How does serving cost scale with more industry verticals? | Sub-linearly — new verticals add small LoRA adapters on the shared base model, not new model deployments (see [Model serving & adapter scaling](#model-serving--adapter-scaling)). |
 
 ---
 

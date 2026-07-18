@@ -39,11 +39,11 @@ Demo tenants under `data/tenants/` are the multi-customer fiction made concrete 
 | KPI | Role | Target (directional) |
 |---|---|---|
 | **Value F1** | Right text vs DocILE? Release gate for extract. | High-80s/90s%, field-dependent — line items trail headers |
-| **IoU pass@0.5** | Of value-correct + boxed fields, % with IoU ≥ 0.5? Release gate for ground. | Low-90s% on unambiguous single-instance fields; meaningfully lower on repeated-amount fields — see `EXTRACTION.md#grounding` failure-mode table |
+| **IoU pass@0.5** | Of value-correct + boxed fields, % with IoU ≥ 0.5? Release gate for ground. | Low-90s% on unambiguous single-instance fields; meaningfully lower on repeated-amount fields — see [`EXTRACTION.md` grounding](EXTRACTION.md#grounding) failure-mode table |
 | **Grounding coverage** | % of predicted values that have a bbox. | High — low coverage means values are landing in `needs_review` too often, a review-queue cost, not a silent failure |
 | **`needs_review` rate** | Trust signal; spike = regression. | Stable baseline; alert on delta, not absolute |
 | **DLQ depth** | Jobs that exhausted retries against a down/degraded LLM backend. | Near-zero at steady state; nonzero sustained = backend health incident, not a product bug |
-| **Cost / doc · latency · queue lag** | Margin and UX. | Escalation rate is the cost lever — target ~80% fast-path (`EXTRACTION.md#escalation`) |
+| **Cost / doc · latency · queue lag** | Margin and UX. | Escalation rate is the cost lever — target ~80% fast-path ([`EXTRACTION.md`](EXTRACTION.md#escalation-cost-control)) |
 
 Directional targets, not measured production SLOs — current build runs against a demo/DocILE set, not live traffic.
 
@@ -67,7 +67,7 @@ Definitions: [`EXTRACTION.md`](EXTRACTION.md#evaluation).
 - Quantify cost of a grounding miss at our volume.
 - Bake off on the same DocILE set (value F1 + pass@0.5).
 - Compare error reduction to API spend.
-- Single-digit pass-rate gap: closable with grounding tuning already owned (`EXTRACTION.md#grounding`).
+- Single-digit pass-rate gap: closable with grounding tuning already owned ([`EXTRACTION.md` grounding](EXTRACTION.md#grounding)).
 - Large gap concentrated in the repeated-amount failure mode: signals a structural ceiling on the post-hoc approach — this is the threshold where buy gets reconsidered.
 
 ---
@@ -91,10 +91,10 @@ Numbers live in SYSTEM — don't re-derive them here.
 
 1. **Product:** Parse → Extract → Ground → Chat; boxes never from the LLM.
 2. **Why layout models exist:** 1D transformers discard position; LayoutLM fuses word+bbox+image — the box is an input, not a generated output.
-3. **Our bet:** post-hoc grounding for speed-to-ship; escalate easy→hard models for cost. Every failure mode is named and mitigated (`EXTRACTION.md#grounding`).
+3. **Our bet:** post-hoc grounding for speed-to-ship; escalate easy→hard models for cost. Every failure mode is named and mitigated ([`EXTRACTION.md` grounding](EXTRACTION.md#grounding)).
 4. **Scale lever:** Little's Law — cut extract latency, cut concurrency; API $ hits a wall → self-host.
-5. **Durability:** bounded retry → DLQ → alert; dashboards read pre-computed rollups, never raw job records.
-6. **Ops:** enriched alerts → smoke → log digest → allowlisted tools → P1–P4 escalate.
+5. **Durability:** bounded retry → DLQ → alert; dashboards read pre-computed rollups, never raw job records — see [`SYSTEM.md`](SYSTEM.md#extraction-pipeline-failure-durability-and-storage).
+6. **Ops:** enriched alerts → smoke → log digest → allowlisted tools → P1–P4 escalate ([`SYSTEM.md` operability](SYSTEM.md#operability-failure-path)).
 7. **Buy frame:** miss-cost × volume vs. ADE-class API; same labeled set; pass@0.5 + F1.
 
 Trap answers: [`SYSTEM.md`](SYSTEM.md#design-traps) · model depth: [`EXTRACTION.md`](EXTRACTION.md#model-strategy).
