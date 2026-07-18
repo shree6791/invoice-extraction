@@ -23,19 +23,20 @@ PDF
 ```
 
 - **Parse** always uses PyMuPDF (OCR fallback when native text is thin). Parallelism is page-level; markdown is built after all pages finish.
-- **MockFast** is not PDF parsing — it’s a cheap *extract* stand-in (regex today → LayoutLM/GPU later) that only sees markdown.
+- **MockFast** is not PDF parsing — it's a cheap *extract* stand-in (regex today → LayoutLM/GPU later) that only sees markdown.
 - **Conditional edges** in LangGraph own easy/hard and escalate-vs-done.
+- **Failure handling** (bounded retry → DLQ → alert on exhausted retries) lives at the fleet level — see [`SYSTEM.md`](SYSTEM.md#extraction-pipeline-failure-durability-and-storage).
 
-Orchestration: `backend/graph/graph.py`.  
+Orchestration: `backend/graph/graph.py`.
 Helpers: `layout.py`, `extract/service.py` (`run_mock_fast` / `run_claude`), `grounding.py`, `chat.py`.
 
-**Invariant:** the LLM emits text only. Coordinates are reconstructed from parse spans.
+**Invariant:** the LLM emits text only. Coordinates are reconstructed from parse spans — never generated, never asked for.
 
-`value` = model’s field answer · `quote` = exact page span used as evidence (may differ under OCR cleanup).
+`value` = model's field answer · `quote` = exact page span used as evidence (may differ under OCR cleanup).
 
 ---
 
-## Schema (Phase 0)
+## Schema (scope)
 
 We score a **subset** of DocILE — not every annotated fieldtype. Unmapped labels (addresses, `amount_due`, `order_id`, …) are ignored by eval.
 
@@ -63,12 +64,13 @@ Map: `backend/settings/constants/docile.py`.
 - Money: label proximity (`TOTAL`, `SUBTOTAL`, …) + tightest exact bbox
 - Near-tie without a clear winner → ungrounded + `needs_review`
 
-| Failure mode | Mitigation |
-|---|---|
-| Repeated `$` amounts | Label boost; else review |
-| OCR junk (`ARNOLD`→`ABNOLD`) | Fuzzy threshold ~0.55 |
-| Split multi-word values | Same-row joins |
-| Fat quotes swallowing labels | Prefer shortest exact money locus |
+| Failure mode | Frequency (rough, unmitigated) | Mitigation | Residual risk after mitigation |
+|---|---|---|---|
+| Repeated `$` amounts (ambiguous match) | Largest single source of grounding error on multi-line-item invoices | Label boost (proximity to `TOTAL`/`SUBTOTAL`) | Top residual risk — label boost helps but doesn't fully disambiguate three similar totals on one page |
+| Normalization mismatch (`$450.00` vs `450.00`; date formats) | Common, but systematic | Field-typed normalize — money/date get aggressive stripping, IDs keep hyphens/slashes | Near-zero once field-typed |
+| Substring trap (`12` ⊂ `112.50`) | Occasional | Length-ratio guard | Low — edge case is near-equal-length false positives |
+| OCR junk (`ARNOLD`→`ABNOLD`) | Only on scanned/OCR'd docs, not native-text PDFs | Fuzzy threshold ~0.55 | Depends on OCR quality; native PyMuPDF text avoids this entirely |
+| Split multi-word values (vendor names, addresses) | Common — PyMuPDF word-level spans rarely equal one value | Same-row joins (≤ 8 spans, y-tolerance) | Low once joined; fails only if a value spans more than 8 tokens or crosses rows |
 
 ---
 
@@ -93,11 +95,16 @@ Two orthogonal gates:
 
 Also: coverage (% values with a bbox), mean IoU, pass@0.7.
 
+**IoU numbers.**
+- Percentage-point pass rates (0–100 scale), not raw average overlap — "82% pass@0.5" means 82% of value-correct, boxed fields have ≥50% overlap with the gold box.
+- 5–10 point pass-rate gap vs. a vendor benchmark: closable with grounding tuning (see failure-mode table above).
+- 15+ point gap, especially concentrated in the repeated-amount failure mode: signals a structural limit of post-hoc fuzzy matching, not a tuning gap — see [`PRODUCT.md`](PRODUCT.md#competitive-frame) for how that distinction drives build-vs-buy.
+
 **Gating:** IoU only runs after the value matches gold (and, for lines, after the row is paired). Wrong text or unmatched rows never enter IoU stats.
 
-**Why both:** perfect boxes on wrong totals don’t help the AP clerk; correct totals with missing boxes still pass F1 but fail audit UI. Improving `grounding.py` moves IoU, not F1.
+**Both gates required:** perfect boxes on wrong totals don't help the AP clerk; correct totals with missing boxes still pass F1 but fail audit UI. Improving `grounding.py` moves IoU, not F1.
 
-Internal release protocol — not DocILE’s official word-overlap AP. Code: `eval/metrics.py`, `gt_header_gold_boxes`, `gt_line_items_gold`.
+Internal release protocol — not DocILE's official word-overlap AP. Code: `eval/metrics.py`, `gt_header_gold_boxes`, `gt_line_items_gold`.
 
 ---
 
@@ -112,7 +119,7 @@ Internal release protocol — not DocILE’s official word-overlap AP. Code: `ev
 | OCR-then-encode | LayoutLM, LiLT, BROS | Bbox is an **input**; labels zip onto those boxes |
 | OCR-free | Donut, Pix2Struct | Pixels → text; no inherent word boxes |
 
-LayoutLM (compressed): BIO token classifier; at infer, argmax labels zip to input boxes. Best for fixed layouts + closed label sets.
+LayoutLM (compressed): BIO token classifier; at infer, argmax labels zip to input boxes. Bbox was already an input feature, never something the model generates. Best for fixed layouts + closed label sets; poor fit for our varied invoice templates without per-template fine-tuning.
 
 ### Where we sit
 
@@ -121,6 +128,7 @@ LayoutLM (compressed): BIO token classifier; at infer, argmax labels zip to inpu
 | Grounding | Post-hoc fuzzy | Structural | Structural (vendor) |
 | Training | None | Fine-tune / LoRA | None (their weights) |
 | Varied layouts | Strong | Needs clusters | Strong |
+| Failure mode owned by us | Yes — every row in the grounding table above is ours to fix | N/A once trained | No — opaque, only observable via IoU delta |
 
 ### Escalation (cost control)
 
@@ -133,13 +141,17 @@ Classify (roadmap) → Parse
 
 Today: `escalation.py` + `MockFastExtractor`. Production dial = escalation **rate** — target ~80% on the fast path.
 
+**80%, not higher:**
+- Fast path only owns documents where MockFast's regex/pattern match returns empty `needs_review` — layouts it's confident about.
+- Pushing past ~80% means accepting fast-path answers on ambiguous documents — trading cost savings for exactly the errors the failure-mode table above exists to catch.
+- The rate is a dial against risk, not a pure cost-minimization target.
+
 ### Multi-vertical + flywheel
 
-One shared base + **classify → LoRA** per industry/doc-type. DocILE `cluster_id` seeds layout clustering.  
-Confirmed extractions → per-cluster training → LoRA patches. At tens of M docs/day even a small confirm rate dominates cold-start corpora.
+One shared base + **classify → LoRA** per industry/doc-type. DocILE `cluster_id` seeds layout clustering. Confirmed extractions → per-cluster training → LoRA patches. At tens of M docs/day even a small confirm rate dominates cold-start corpora. Infra cost of serving many adapters: [`SYSTEM.md`](SYSTEM.md#model-serving--adapter-scaling).
 
 ---
 
 ## Out of scope here
 
-Capacity, Kafka, tenancy tiers, phase rollout → [`SYSTEM.md`](SYSTEM.md).
+Capacity, Kafka, tenancy tiers, component trade-offs, failure/retry, metrics rollups → [`SYSTEM.md`](SYSTEM.md).
