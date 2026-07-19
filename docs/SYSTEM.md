@@ -20,7 +20,7 @@ Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTI
 
 ## Target topology
 
-Visual: [`DIAGRAMS.md` target fleet](DIAGRAMS.md#4-target-fleet-topology) · [Phase 0](DIAGRAMS.md#3-phase-0-now).
+Visual: [`DIAGRAMS.md` target fleet](DIAGRAMS.md#target-fleet-topology) · [Phase 0](DIAGRAMS.md#phase-0-now).
 
 ```
 CDN / edge     API key -> {tenant, region, shard, quota}; token bucket -> 429

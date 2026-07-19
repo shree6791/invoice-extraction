@@ -4,17 +4,17 @@ Architecture sketches for the Invoice Extraction product (Mermaid). Narrative li
 
 | Diagram | Read with |
 |---|---|
-| [Product surface](#1-product-surface) | [`PRODUCT.md`](PRODUCT.md) |
-| [Extract pipeline (LangGraph)](#2-extract-pipeline-langgraph) | [`EXTRACTION.md`](EXTRACTION.md#pipeline-today) |
-| [Phase 0 (now)](#3-phase-0-now) | [`SYSTEM.md`](SYSTEM.md) |
-| [Target fleet topology](#4-target-fleet-topology) | [`SYSTEM.md`](SYSTEM.md#target-topology) · [`CAPACITY.md`](CAPACITY.md) |
-| [Failure / retry / DLQ](#5-failure--retry--dlq) | [`RELIABILITY.md`](RELIABILITY.md#extraction-pipeline-failure-durability-and-storage) |
-| [Tenant shard & fairness](#6-tenant-shard--fairness) | [`CAPACITY.md`](CAPACITY.md#partitioning--sharding) · [`SYSTEM.md`](SYSTEM.md#tenancy) |
-| [Hot path vs warehouse](#7-hot-path-vs-warehouse) | [`RELIABILITY.md`](RELIABILITY.md#metrics-rollups-dashboard-read-path) |
+| [Product surface](#product-surface) | [`PRODUCT.md`](PRODUCT.md) |
+| [Extract pipeline (LangGraph)](#extract-pipeline-langgraph) | [`EXTRACTION.md`](EXTRACTION.md#pipeline-today) |
+| [Phase 0 (now)](#phase-0-now) | [`SYSTEM.md`](SYSTEM.md) |
+| [Target fleet topology](#target-fleet-topology) | [`SYSTEM.md`](SYSTEM.md#target-topology) · [`CAPACITY.md`](CAPACITY.md) |
+| [Failure / retry / DLQ](#failure-retry-dlq) | [`RELIABILITY.md`](RELIABILITY.md#extraction-pipeline-failure-durability-and-storage) |
+| [Tenant shard and fairness](#tenant-shard-and-fairness) | [`CAPACITY.md`](CAPACITY.md#partitioning--sharding) · [`SYSTEM.md`](SYSTEM.md#tenancy) |
+| [Hot path vs warehouse](#hot-path-vs-warehouse) | [`RELIABILITY.md`](RELIABILITY.md#metrics-rollups-dashboard-read-path) |
 
 ---
 
-## 1. Product surface
+## Product surface
 
 Parse → Extract → Ground → Chat. Boxes never come from the LLM.
 
@@ -32,7 +32,7 @@ Details: [`PRODUCT.md` surface](PRODUCT.md#surface) · [`EXTRACTION.md` groundin
 
 ---
 
-## 2. Extract pipeline (LangGraph)
+## Extract pipeline (LangGraph)
 
 Today’s graph inside one process. Grounding runs inside each extract path.
 
@@ -49,11 +49,11 @@ flowchart TD
   Final --> Out([Invoice + routing / escalated])
 ```
 
-Escalation & model roadmap: [`EXTRACTION.md`](EXTRACTION.md#escalation-cost-control).
+Escalation and model roadmap: [`EXTRACTION.md`](EXTRACTION.md#escalation-cost-control).
 
 ---
 
-## 3. Phase 0 (now)
+## Phase 0 (now)
 
 Contracts only — in-memory queue / cache / jobs, one worker.
 
@@ -87,7 +87,7 @@ Swap map: [`SYSTEM.md` component choices](SYSTEM.md#component-choices).
 
 ---
 
-## 4. Target fleet topology
+## Target fleet topology
 
 Design point (~4M docs/day). Parse and extract scale independently.
 
@@ -103,7 +103,7 @@ flowchart TB
   Extract -->|transient fail| Retry[Retry queue]
   Retry --> Extract
   Extract -->|retries exhausted| DLQ[(DLQ)]
-  Ground --> PG[(Postgres jobs &lt;48h)]
+  Ground --> PG[(Postgres jobs under 48h)]
   Ground --> S3[(S3 PDF + result JSON)]
   Ground --> Rollups[Metrics aggregator]
   Rollups --> Dash[Dashboard read path]
@@ -115,19 +115,19 @@ Sizing: [`CAPACITY.md`](CAPACITY.md). Durability: [`RELIABILITY.md`](RELIABILITY
 
 ---
 
-## 5. Failure / retry / DLQ
+## Failure retry DLQ
 
 No silent drops when the LLM backend is down.
 
 ```mermaid
 stateDiagram-v2
-  [*] --> Acked: enqueue &lt; 50ms
+  [*] --> Acked: enqueue under 50ms
   Acked --> Parsing: parse stage
   Parsing --> Extracting: parse OK
   Parsing --> FailedParse: bad PDF
   Extracting --> Grounded: extract OK
   Extracting --> Retrying: transient error
-  Retrying --> Extracting: backoff ≤ N
+  Retrying --> Extracting: backoff max N
   Retrying --> DLQ: budget exhausted
   Grounded --> Complete: write result
   DLQ --> Alerting: page on-call
@@ -140,7 +140,7 @@ Narrative: [`RELIABILITY.md` pipeline](RELIABILITY.md#extraction-pipeline-failur
 
 ---
 
-## 6. Tenant shard & fairness
+## Tenant shard and fairness
 
 `tenant_id` is the partition and shard key — noisy neighbors stay in their lane.
 
@@ -168,16 +168,16 @@ Lookup table (not consistent hashing): [`CAPACITY.md` partitioning](CAPACITY.md#
 
 ---
 
-## 7. Hot path vs warehouse
+## Hot path vs warehouse
 
 Dashboards never scan raw job rows. Audit queries use the warehouse tier.
 
 ```mermaid
 flowchart TB
-  Job[Extract + ground complete] --> Hot[(Postgres &lt;48h hot)]
+  Job[Extract + ground complete] --> Hot[(Postgres under 48h hot)]
   Job --> S3[(S3 partitioned date / tenant_id)]
   Job --> Rollup[Per-tenant minute/hour/day buckets]
-  Rollup --> Redis[(Redis / TS hot rollups 24–48h)]
+  Rollup --> Redis[(Redis / TS hot rollups 24-48h)]
   Redis --> API[Dashboard API]
   S3 --> Athena[Athena / batch aggregates]
   Athena --> API

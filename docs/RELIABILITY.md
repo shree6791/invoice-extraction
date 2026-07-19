@@ -8,7 +8,7 @@ Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md). Diagrams: [
 
 ## Extraction pipeline: failure, durability, and storage
 
-Visual: [`DIAGRAMS.md` failure / DLQ](DIAGRAMS.md#5-failure--retry--dlq).
+Visual: [`DIAGRAMS.md` failure / DLQ](DIAGRAMS.md#failure-retry-dlq).
 
 Extract+ground runs asynchronously after ack; a job must not be lost if the LLM backend is unavailable.
 

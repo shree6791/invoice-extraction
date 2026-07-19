@@ -8,7 +8,7 @@ Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · 
 
 ## Pipeline (today)
 
-Visual: [`DIAGRAMS.md` LangGraph](DIAGRAMS.md#2-extract-pipeline-langgraph).
+Visual: [`DIAGRAMS.md` LangGraph](DIAGRAMS.md#extract-pipeline-langgraph).
 
 ```
 PDF
