@@ -2,7 +2,7 @@
 
 Fleet sizing for the Invoice Extraction product: demand, latency, ingestion, sharding, and adapter serving cost.
 
-Hub: [`SYSTEM.md`](SYSTEM.md). Durability / ops: [`RELIABILITY.md`](RELIABILITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
+Hub: [`SYSTEM.md`](SYSTEM.md). Durability / ops: [`RELIABILITY.md`](RELIABILITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
 
 **Operating point:** 4M docs/day (~46/s avg, ~139/s at 3× peak).  
 **Architecture ceiling:** ~100M req/day (~1.16K/s avg, ~3.5K/s peak) — see Demand derivation.
@@ -91,6 +91,28 @@ P99 target: 15 s, broken into hops:
 ---
 
 ## Partitioning & sharding
+
+`tenant_id` is the partition and shard key — noisy neighbors stay in their lane.
+
+```mermaid
+flowchart LR
+  subgraph Ingress
+    T1[tenant A · high volume]
+    T2[tenant B · SMB]
+    T3[tenant C · SMB]
+  end
+
+  subgraph Kafka
+    P7[partition / shard 7 · dedicated]
+    P1[partition / shard 1 · shared]
+  end
+
+  T1 --> P7
+  T2 --> P1
+  T3 --> P1
+  P7 --> W7[workers on shard 7]
+  P1 --> W1[workers on shard 1]
+```
 
 **Kafka partition key: `tenant_id`.**
 - Preserves per-tenant ordering and fairness — a noisy tenant fills its own partition(s), not others'

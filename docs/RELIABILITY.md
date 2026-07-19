@@ -2,15 +2,30 @@
 
 Failure handling, durability, dashboard read path, warehouse, and on-call for the Invoice Extraction product.
 
-Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
+Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
 
 ---
 
 ## Extraction pipeline: failure, durability, and storage
 
-Visual: [`DIAGRAMS.md` failure / DLQ](DIAGRAMS.md#failure-retry-dlq).
-
 Extract+ground runs asynchronously after ack; a job must not be lost if the LLM backend is unavailable.
+
+```mermaid
+stateDiagram-v2
+  [*] --> Acked: enqueue under 50ms
+  Acked --> Parsing: parse stage
+  Parsing --> Extracting: parse OK
+  Parsing --> FailedParse: bad PDF
+  Extracting --> Grounded: extract OK
+  Extracting --> Retrying: transient error
+  Retrying --> Extracting: backoff max N
+  Retrying --> DLQ: budget exhausted
+  Grounded --> Complete: write result
+  DLQ --> Alerting: page on-call
+  Alerting --> Extracting: admin requeue
+  Complete --> [*]
+  FailedParse --> [*]
+```
 
 ```
 Job acked (enqueue < 50ms)
@@ -37,6 +52,19 @@ Retry budget is bounded — unbounded retries against a down backend amplify the
 ## Metrics rollups (dashboard read path)
 
 Dashboard KPIs (needs_review rate, cost/doc, IoU pass rate, coverage, lag) are computed from pre-aggregated buckets, never from a live scan of raw job records.
+
+```mermaid
+flowchart TB
+  Job[Extract + ground complete] --> Hot[(Postgres under 48h hot)]
+  Job --> S3[(S3 partitioned date / tenant_id)]
+  Job --> Rollup[Per-tenant minute/hour/day buckets]
+  Rollup --> Redis[(Redis / TS hot rollups 24-48h)]
+  Redis --> API[Dashboard API]
+  S3 --> Athena[Athena / batch aggregates]
+  Athena --> API
+  API -->|last 48h| Redis
+  API -->|older / audit| Athena
+```
 
 - Aggregation runs per-tenant, per-minute/hour/day as jobs complete: extraction count, needs_review count, mean IoU, cost, latency.
 - A dashboard query for "last 2 hours" reads 120 minute-bucket rows; a query for "last 12 months" reads 12 month-bucket rows. Never a full table scan.

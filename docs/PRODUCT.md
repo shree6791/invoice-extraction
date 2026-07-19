@@ -4,7 +4,7 @@ Invoice Extraction as a **document AI product**: one API that turns PDFs into gr
 
 Peers in the market (e.g. Landing AI ADE) sell the same verbs. We implement them explicitly so every design choice maps to a customer-visible guarantee.
 
-Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md).
+Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
 
 ---
 
@@ -17,6 +17,16 @@ Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SY
 | **Ground** | Attach `page + bbox + quote` so a human can click the source. Ambiguity → `needs_review`, never a silent wrong box. |
 | **Chat** | Grounded Q&A over the extracted invoice — citations from grounded fields only. |
 | **Classify** *(roadmap)* | Doc-type / template cluster → route to the right extractor (LoRA / prompt / vendor). |
+
+```mermaid
+flowchart LR
+  PDF[PDF] --> Parse
+  Parse -->|spans + markdown| Extract
+  Extract -->|schema values| Ground
+  Ground -->|page + bbox + quote| Invoice[Grounded invoice JSON]
+  Invoice --> Chat
+  Ground -->|ambiguous| Review[needs_review]
+```
 
 Demo tenants under `data/tenants/` are the multi-customer fiction made concrete (5 cos × 5 invoices).
 

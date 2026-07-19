@@ -2,13 +2,24 @@
 
 How **Parse → Extract → Ground → Chat** works, how we score it, and how the model stack evolves.
 
-Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md).
+Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
 
 ---
 
 ## Pipeline (today)
 
-Visual: [`DIAGRAMS.md` LangGraph](DIAGRAMS.md#extract-pipeline-langgraph).
+```mermaid
+flowchart TD
+  Start([doc_id / PDF]) --> Resolve[resolve_input]
+  Resolve --> Parse[parse · PyMuPDF parallel pages]
+  Parse --> Classify{classify_extract}
+  Classify -->|hard| Claude[extract_claude]
+  Classify -->|easy| Mock[extract_mock_fast]
+  Mock -->|needs_review| Claude
+  Mock -->|clean| Final[finalize]
+  Claude --> Final
+  Final --> Out([Invoice + routing / escalated])
+```
 
 ```
 PDF

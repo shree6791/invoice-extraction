@@ -7,20 +7,63 @@ Architecture hub for the Invoice Extraction product: what we run today, target t
 | **This file** | Phase 0 vs design, topology, component choices, tenancy, traps |
 | [`CAPACITY.md`](CAPACITY.md) | Demand, Little’s Law, latency, ingestion/HPA, sharding, adapter serving |
 | [`RELIABILITY.md`](RELIABILITY.md) | Retry/DLQ, rollups, warehouse, operability |
-| [`DIAGRAMS.md`](DIAGRAMS.md) | Mermaid architecture sketches |
 
-Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTION.md`](EXTRACTION.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md).
+Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTION.md`](EXTRACTION.md).
 
 **Design point:** 100M req/day ceiling; **4M docs/day** operating point ([`CAPACITY.md`](CAPACITY.md#demand-derivation)).  
 **Load-bearing decision:** self-hosted LLM — API cost (~$95K/day order) and rate limits are a hard ceiling at this volume.
 
 **Phase 0 (now):** one FastAPI process; in-memory queue / cache / job store; single worker. Proves **contracts**, not scale. Rows in [Component choices](#component-choices) under **Now** are what ships today; **At scale** is the design target.
 
+```mermaid
+flowchart TB
+  subgraph Client
+    UI[Demo UI / curl]
+  end
+
+  subgraph FastAPI["Single FastAPI process"]
+    API[Routes · TenantMiddleware]
+    Q[InMemoryQueue]
+    Store[InMemoryJobStore]
+    Cache[InMemoryCache]
+    Worker[1 × asyncio.to_thread worker]
+    Graph[LangGraph pipeline]
+    API --> Q
+    API --> Store
+    Worker --> Q
+    Worker --> Graph
+    Worker --> Store
+    Worker --> Cache
+  end
+
+  UI -->|POST /api/extract sync| Graph
+  UI -->|POST /api/jobs| API
+  Graph --> PDF[(data/tenants · data/docile)]
+```
+
 ---
 
 ## Target topology
 
-Visual: [`DIAGRAMS.md` target fleet](DIAGRAMS.md#target-fleet-topology) · [Phase 0](DIAGRAMS.md#phase-0-now).
+```mermaid
+flowchart TB
+  Edge[CDN / edge · API key · token bucket] -->|429 if over quota| API[Regional API]
+  API --> Redis[(Redis ETag dedup)]
+  API --> Kafka[(Kafka · key = tenant_id)]
+  Kafka --> Parse[Parse pods · CPU · PyMuPDF]
+  Parse -->|parse-complete| ExtractQ[Extract queue]
+  ExtractQ --> Extract[Extract pods · GPU / vLLM]
+  Extract -->|success| Ground[Ground in-process]
+  Extract -->|transient fail| Retry[Retry queue]
+  Retry --> Extract
+  Extract -->|retries exhausted| DLQ[(DLQ)]
+  Ground --> PG[(Postgres jobs under 48h)]
+  Ground --> S3[(S3 PDF + result JSON)]
+  Ground --> Rollups[Metrics aggregator]
+  Rollups --> Dash[Dashboard read path]
+  S3 --> Warehouse[Warehouse · Athena]
+  DLQ --> Alert[Alert / requeue tool]
+```
 
 ```
 CDN / edge     API key -> {tenant, region, shard, quota}; token bucket -> 429
