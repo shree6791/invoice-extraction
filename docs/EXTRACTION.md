@@ -2,7 +2,7 @@
 
 How **Parse → Extract → Ground → Chat** works, how we score it, and how the model stack evolves.
 
-Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet / tenancy: [`SYSTEM.md`](SYSTEM.md).
+Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
 
 ---
 
@@ -25,7 +25,7 @@ PDF
 - **Parse** always uses PyMuPDF (OCR fallback when native text is thin). Parallelism is page-level; markdown is built after all pages finish.
 - **MockFast** is not PDF parsing — it's a cheap *extract* stand-in (regex today → LayoutLM/GPU later) that only sees markdown.
 - **Conditional edges** in LangGraph own easy/hard and escalate-vs-done.
-- **Failure handling** (bounded retry → DLQ → alert on exhausted retries) lives at the fleet level — see [`SYSTEM.md`](SYSTEM.md#extraction-pipeline-failure-durability-and-storage).
+- **Failure handling** (bounded retry → DLQ → alert on exhausted retries) lives at the fleet level — see [`RELIABILITY.md`](RELIABILITY.md#extraction-pipeline-failure-durability-and-storage).
 
 Orchestration: `backend/graph/graph.py`.
 Helpers: `layout.py`, `extract/service.py` (`run_mock_fast` / `run_claude`), `grounding.py`, `chat.py`.
@@ -148,10 +148,10 @@ Today: `escalation.py` + `MockFastExtractor`. Production dial = escalation **rat
 
 ### Multi-vertical + flywheel
 
-One shared base + **classify → LoRA** per industry/doc-type. DocILE `cluster_id` seeds layout clustering. Confirmed extractions → per-cluster training → LoRA patches. At tens of M docs/day even a small confirm rate dominates cold-start corpora. Infra cost of serving many adapters: [`SYSTEM.md`](SYSTEM.md#model-serving--adapter-scaling).
+One shared base + **classify → LoRA** per industry/doc-type. DocILE `cluster_id` seeds layout clustering. Confirmed extractions → per-cluster training → LoRA patches. At tens of M docs/day even a small confirm rate dominates cold-start corpora. Infra cost of serving many adapters: [`CAPACITY.md`](CAPACITY.md#model-serving--adapter-scaling).
 
 ---
 
 ## Out of scope here
 
-Capacity, Kafka, tenancy tiers, component trade-offs, failure/retry, metrics rollups → [`SYSTEM.md`](SYSTEM.md).
+Capacity, Kafka, tenancy, component trade-offs → [`SYSTEM.md`](SYSTEM.md). Sizing math → [`CAPACITY.md`](CAPACITY.md). Failure/retry, rollups → [`RELIABILITY.md`](RELIABILITY.md).

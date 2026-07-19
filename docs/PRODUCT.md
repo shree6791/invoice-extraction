@@ -4,7 +4,7 @@ Invoice Extraction as a **document AI product**: one API that turns PDFs into gr
 
 Peers in the market (e.g. Landing AI ADE) sell the same verbs. We implement them explicitly so every design choice maps to a customer-visible guarantee.
 
-Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet / tenancy: [`SYSTEM.md`](SYSTEM.md).
+Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
 
 ---
 
@@ -81,7 +81,7 @@ Definitions: [`EXTRACTION.md`](EXTRACTION.md#evaluation).
 | Value F1 + IoU eval (`python -m eval`) | S3 + gateway + HPA, split parse/extract | Classify → LoRA per vertical |
 | 5 demo tenants | | Warehouse tier (audit queries), tiered isolation + regions |
 
-Component-level trade-offs and fleet math: [`SYSTEM.md`](SYSTEM.md#component-choices).
+Component-level trade-offs: [`SYSTEM.md`](SYSTEM.md#component-choices). Fleet math: [`CAPACITY.md`](CAPACITY.md).
 
 ---
 
@@ -93,8 +93,8 @@ Numbers live in SYSTEM — don't re-derive them here.
 2. **Why layout models exist:** 1D transformers discard position; LayoutLM fuses word+bbox+image — the box is an input, not a generated output.
 3. **Our bet:** post-hoc grounding for speed-to-ship; escalate easy→hard models for cost. Every failure mode is named and mitigated ([`EXTRACTION.md` grounding](EXTRACTION.md#grounding)).
 4. **Scale lever:** Little's Law — cut extract latency, cut concurrency; API $ hits a wall → self-host.
-5. **Durability:** bounded retry → DLQ → alert; dashboards read pre-computed rollups, never raw job records — see [`SYSTEM.md`](SYSTEM.md#extraction-pipeline-failure-durability-and-storage).
-6. **Ops:** enriched alerts → smoke → log digest → allowlisted tools → P1–P4 escalate ([`SYSTEM.md` operability](SYSTEM.md#operability-failure-path)).
+5. **Durability:** bounded retry → DLQ → alert; dashboards read pre-computed rollups, never raw job records — see [`RELIABILITY.md`](RELIABILITY.md#extraction-pipeline-failure-durability-and-storage).
+6. **Ops:** enriched alerts → smoke → log digest → allowlisted tools → P1–P4 escalate ([`RELIABILITY.md` operability](RELIABILITY.md#operability-failure-path)).
 7. **Buy frame:** miss-cost × volume vs. ADE-class API; same labeled set; pass@0.5 + F1.
 
 Trap answers: [`SYSTEM.md`](SYSTEM.md#design-traps) · model depth: [`EXTRACTION.md`](EXTRACTION.md#model-strategy).
