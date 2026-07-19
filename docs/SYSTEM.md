@@ -7,8 +7,9 @@ Architecture hub for the Invoice Extraction product: what we run today, target t
 | **This file** | Phase 0 vs design, topology, component choices, tenancy, traps |
 | [`CAPACITY.md`](CAPACITY.md) | Demand, Little’s Law, latency, ingestion/HPA, sharding, adapter serving |
 | [`RELIABILITY.md`](RELIABILITY.md) | Retry/DLQ, rollups, warehouse, operability |
+| [`DIAGRAMS.md`](DIAGRAMS.md) | Mermaid architecture sketches |
 
-Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTION.md`](EXTRACTION.md).
+Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTION.md`](EXTRACTION.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md).
 
 **Design point:** 100M req/day ceiling; **4M docs/day** operating point ([`CAPACITY.md`](CAPACITY.md#demand-derivation)).  
 **Load-bearing decision:** self-hosted LLM — API cost (~$95K/day order) and rate limits are a hard ceiling at this volume.
@@ -18,6 +19,8 @@ Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTI
 ---
 
 ## Target topology
+
+Visual: [`DIAGRAMS.md` target fleet](DIAGRAMS.md#4-target-fleet-topology) · [Phase 0](DIAGRAMS.md#3-phase-0-now).
 
 ```
 CDN / edge     API key -> {tenant, region, shard, quota}; token bucket -> 429

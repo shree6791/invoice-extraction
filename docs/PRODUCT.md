@@ -4,7 +4,7 @@ Invoice Extraction as a **document AI product**: one API that turns PDFs into gr
 
 Peers in the market (e.g. Landing AI ADE) sell the same verbs. We implement them explicitly so every design choice maps to a customer-visible guarantee.
 
-Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
+Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md).
 
 ---
 
@@ -68,7 +68,7 @@ Definitions: [`EXTRACTION.md`](EXTRACTION.md#evaluation).
 - Bake off on the same DocILE set (value F1 + pass@0.5).
 - Compare error reduction to API spend.
 - Single-digit pass-rate gap: closable with grounding tuning already owned ([`EXTRACTION.md` grounding](EXTRACTION.md#grounding)).
-- Large gap concentrated in the repeated-amount failure mode: signals a structural ceiling on the post-hoc approach — this is the threshold where buy gets reconsidered.
+- Large gap concentrated in the repeated-amount failure mode: signals a structural ceiling on the post-hoc approach — the threshold for reconsidering buy.
 
 ---
 

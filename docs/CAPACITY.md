@@ -2,7 +2,7 @@
 
 Fleet sizing for the Invoice Extraction product: demand, latency, ingestion, sharding, and adapter serving cost.
 
-Hub: [`SYSTEM.md`](SYSTEM.md). Durability / ops: [`RELIABILITY.md`](RELIABILITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
+Hub: [`SYSTEM.md`](SYSTEM.md). Durability / ops: [`RELIABILITY.md`](RELIABILITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
 
 **Operating point:** 4M docs/day (~46/s avg, ~139/s at 3× peak).  
 **Architecture ceiling:** ~100M req/day (~1.16K/s avg, ~3.5K/s peak) — see Demand derivation.

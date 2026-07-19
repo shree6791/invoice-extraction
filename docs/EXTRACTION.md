@@ -2,11 +2,13 @@
 
 How **Parse → Extract → Ground → Chat** works, how we score it, and how the model stack evolves.
 
-Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
+Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md).
 
 ---
 
 ## Pipeline (today)
+
+Visual: [`DIAGRAMS.md` LangGraph](DIAGRAMS.md#2-extract-pipeline-langgraph).
 
 ```
 PDF

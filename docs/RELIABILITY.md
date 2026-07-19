@@ -2,11 +2,13 @@
 
 Failure handling, durability, dashboard read path, warehouse, and on-call for the Invoice Extraction product.
 
-Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
+Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md). Diagrams: [`DIAGRAMS.md`](DIAGRAMS.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
 
 ---
 
 ## Extraction pipeline: failure, durability, and storage
+
+Visual: [`DIAGRAMS.md` failure / DLQ](DIAGRAMS.md#5-failure--retry--dlq).
 
 Extract+ground runs asynchronously after ack; a job must not be lost if the LLM backend is unavailable.
 

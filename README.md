@@ -20,6 +20,7 @@ Failed grounding → `needs_review` (value kept, bbox cleared). Responses expose
 | [`docs/SYSTEM.md`](docs/SYSTEM.md) | Architecture hub — topology, swaps, tenancy, traps |
 | [`docs/CAPACITY.md`](docs/CAPACITY.md) | Demand, latency, ingestion, sharding, adapters |
 | [`docs/RELIABILITY.md`](docs/RELIABILITY.md) | Retry/DLQ, rollups, warehouse, operability |
+| [`docs/DIAGRAMS.md`](docs/DIAGRAMS.md) | Mermaid architecture diagrams |
 
 ## Setup
 
@@ -59,7 +60,7 @@ OpenAPI: `http://localhost:8000/docs`
 backend/       FastAPI · LangGraph pipeline · infra swaps · tenants
 eval/          Value F1 + bbox IoU (`python -m eval`)
 frontend/      Static demo UI (`js/` modules)
-docs/          PRODUCT · EXTRACTION · SYSTEM · CAPACITY · RELIABILITY
+docs/          PRODUCT · EXTRACTION · SYSTEM · CAPACITY · RELIABILITY · DIAGRAMS
 data/tenants/  Demo invoices (5 × 5)
 data/docile/   Full DocILE (local only)
 ```
