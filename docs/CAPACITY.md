@@ -2,9 +2,9 @@
 
 Fleet sizing for the Invoice Extraction product: demand, latency, ingestion, sharding, and adapter serving cost.
 
-Hub: [`SYSTEM.md`](SYSTEM.md). Durability / ops: [`RELIABILITY.md`](RELIABILITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
+Hub: [`SYSTEM.md`](SYSTEM.md). Durability / ops: [`RELIABILITY.md`](RELIABILITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md). Worker/core/GPU sizing math: [`SIZING.md`](SIZING.md).
 
-**Operating point:** 4M docs/day (~46/s avg, ~139/s at 3× peak).  
+**Operating point:** 4M docs/day (~46/s avg, ~139/s at 3× peak).
 **Architecture ceiling:** ~100M req/day (~1.16K/s avg, ~3.5K/s peak) — see Demand derivation.
 
 ---
@@ -27,6 +27,8 @@ concurrency = arrival_rate × service_time      (Little's Law)
 
 Design point: **4M docs/day**.
 
+DAU math: order-of-magnitude ceiling only. Load is tenant-concentrated — 2,000 enterprise tenants (2% of tenant count) generate a quarter of daily volume. Direct DAU math mis-shapes sharding and fairness design; see [Partitioning & sharding](#partitioning--sharding).
+
 ### Per-event size
 
 | Artifact | Derivation | Size |
@@ -43,11 +45,11 @@ Design point: **4M docs/day**.
 | Self-hosted LLM | ~1 s | ~46 | ~140 |
 | LayoutLM fast path | ~50–200 ms | ~2–9 | ~7–28 |
 
-Latency determines fleet size directly: a 10× cut in extract time cuts concurrency 10×.
+A 10× cut in extract time cuts concurrency 10× — the load-bearing argument for self-hosting at this volume, independent of token cost.
 
-**Storage:** 4M × 100 KB = 400 GB/day PDF → S3 with lifecycle policy. Job records: partition by time, keep &lt; 48h hot in Postgres; older records move to the [warehouse tier](RELIABILITY.md#warehouse-tier-long-term--audit).
+**Storage:** 4M × 100 KB = 400 GB/day PDF → S3 with lifecycle policy. Job records: partition by time, keep < 48h hot in Postgres; older records move to the [warehouse tier](RELIABILITY.md#warehouse-tier-long-term--audit).
 
-**GPU sketch @ 1s/doc, batch 8:** ~6 GPUs, 1 node. Sizing sketch, not a procurement figure.
+**GPU sketch @ 1s/doc, batch 8:** ~6 GPUs, 1 node. Sizing sketch, not a procurement figure — full derivation and batch-size sensitivity: [`SIZING.md`](SIZING.md#extract-gpu-batched).
 
 ---
 
@@ -55,11 +57,15 @@ Latency determines fleet size directly: a 10× cut in extract time cuts concurre
 
 Ingestion instances are stateless and horizontally autoscaled behind a load balancer. Autoscaling ties to request rate, not CPU — ingestion is I/O-bound (accept, dedup, enqueue), not compute-bound.
 
+"Ingestion" = the accept/dedup/enqueue tier, distinct from the Kubernetes `Ingress` resource (routing/TLS at the cluster edge). A K8s `Ingress`, if deployed, sits within the CDN/Edge layer ([`SYSTEM.md` topology](SYSTEM.md#target-topology)) in front of the ingestion instances described here.
+
 **Server-count estimate.**
 - ~2K req/s assumed sustained capacity per ingestion instance (accept + dedup + enqueue, no parse/extract work on this tier)
 - Ceiling case: ~1.16K req/s avg fits within a single instance; 3× peak (~3.5K req/s) requires ~2
 - Operating point (4M/day, ~46 req/s avg, ~139 req/s peak): one instance covers both
 - Extract capacity is the bottleneck (see [Service-time capacity](#service-time-capacity)), not ingestion
+
+Core/worker sizing: [`SIZING.md` Ingestion](SIZING.md#ingestion-io-bound).
 
 **Multi-region / multi-AZ.**
 - Deployed per-region (see [`SYSTEM.md` topology](SYSTEM.md#target-topology))
@@ -75,16 +81,16 @@ P99 target: 15 s, broken into hops:
 
 | Stage | Type | Time | Notes |
 |---|---|---|---|
-| Ingress → Kafka | enqueue | &lt; 50 ms | token bucket + dedup (Redis ETag) |
-| Kafka → Parse pod | queue lag | &lt; 100 ms steady | per-tenant partition fairness |
+| Ingress → Kafka | enqueue | < 50 ms | token bucket + dedup (Redis ETag) |
+| Kafka → Parse pod | queue lag | < 100 ms steady | per-tenant partition fairness |
 | Parse (PyMuPDF) | compute | ~200–500 ms | CPU-bound, page-parallel |
-| Parse → Extract queue | hop | &lt; 100 ms | independent HPA per stage |
+| Parse → Extract queue | hop | < 100 ms | independent HPA per stage |
 | Extract (LLM) | compute | ~1–10 s | dominant cost; self-hosting reduces this |
-| Ground (fuzzy match) | compute | &lt; 50 ms | in-process, no external call |
+| Ground (fuzzy match) | compute | < 50 ms | in-process, no external call |
 | Extract → Chat (optional) | on-demand | n/a | not on the ingest critical path |
 
 **Backpressure (parse → extract queue).**
-- If queue depth × extract service time exceeds ~2× current in-flight capacity for &gt; 30s, scale extract pods before shedding
+- If queue depth × extract service time exceeds ~2× current in-flight capacity for > 30s, scale extract pods before shedding
 - A sustained breach past the HPA ceiling returns 429 upstream rather than let the queue grow unbounded
 - Parse is cheap and fast; extract is the bottleneck
 
@@ -120,14 +126,27 @@ flowchart LR
 - Time-based keys would serialize all tenants during peak windows
 
 **DB shard key: `tenant_id`, explicit lookup table, not consistent hashing.**
-- Tenant load is heavily skewed
-- Hashing risks co-locating a high-volume tenant with others, creating an unrebalanceable hot shard
-- An explicit table lets ops move one tenant to a dedicated shard without rehashing the rest
 
 ```
 tenant_id=acme-corp     -> shard=7  (dedicated, high-volume)
 tenant_id=freelancer-42 -> shard=1  (shared pool)
 ```
+
+- Tenant load is heavily skewed (500 docs/tenant/day enterprise vs. 10 docs/tenant/day SMB — see [Demand derivation](#demand-derivation))
+- Hashing risks co-locating a high-volume tenant with others, creating an unrebalanceable hot shard
+- An explicit table lets ops move one tenant to a dedicated shard without rehashing the rest
+
+**Consistent hashing (with virtual nodes) vs. explicit table:**
+
+| | Consistent hashing | Explicit table |
+|---|---|---|
+| Fits | Roughly equal-weight units | Skewed load |
+| Rebalance on node add/remove | ~1/N of keys move | Manual, targeted |
+| Outlier tenant isolation | None — placement is hash-determined | Direct — pin to a dedicated shard |
+
+Tenant load here is skewed, not uniform — explicit table selected.
+
+Replication is orthogonal to shard assignment: every shard has its own primary + replicas across AZs (see [Multi-region / multi-AZ](#multi-region--multi-az)), regardless of hashing vs. table.
 
 Every production query (job status, results, invoice lookup) is scoped by `tenant_id` — a single-shard lookup, never scatter-gather.
 
@@ -141,4 +160,4 @@ Model strategy (classify → LoRA per vertical, DocILE cluster seeding, escalati
 - **Routing:** the classify step (see [`EXTRACTION.md`](EXTRACTION.md#model-strategy)) resolves a request to a `cluster_id`; the extract pod loads or already holds the matching adapter and serves the request against base model + adapter.
 - **Batching:** requests routed to the same adapter batch together for GPU throughput. Requests spanning different adapters either pay an adapter-switch cost or queue separately per adapter.
 - **Cold start:** a new vertical or layout cluster with no trained adapter falls back to the Claude escalation path (see [`EXTRACTION.md` escalation](EXTRACTION.md#escalation-cost-control)) until enough confirmed extractions accumulate to train a patch.
-- **Capacity math:** the [GPU sketch](#capacity) above sizes the shared base model at the operating point; adapters run at the LoRA fast-path service time (~50–200 ms), not the Claude/self-hosted-LLM service time.
+- **Capacity math:** the [GPU sketch](#capacity) above sizes the shared base model at the operating point; adapters run at the LoRA fast-path service time (~50–200 ms), not the Claude/self-hosted-LLM service time — no separate GPU sizing math needed ([`SIZING.md` Adapter serving](SIZING.md#adapter-serving)).

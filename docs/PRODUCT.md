@@ -4,7 +4,7 @@ Invoice Extraction as a **document AI product**: one API that turns PDFs into gr
 
 Peers in the market (e.g. Landing AI ADE) sell the same verbs. We implement them explicitly so every design choice maps to a customer-visible guarantee.
 
-Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
+Pipeline / eval depth: [`EXTRACTION.md`](EXTRACTION.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md) · [`SIZING.md`](SIZING.md).
 
 ---
 

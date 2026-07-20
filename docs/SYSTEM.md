@@ -7,6 +7,7 @@ Architecture hub for the Invoice Extraction product: what we run today, target t
 | **This file** | Phase 0 vs design, topology, component choices, tenancy, traps |
 | [`CAPACITY.md`](CAPACITY.md) | Demand, Little’s Law, latency, ingestion/HPA, sharding, adapter serving |
 | [`RELIABILITY.md`](RELIABILITY.md) | Retry/DLQ, rollups, warehouse, operability |
+| [`SIZING.md`](SIZING.md) | Worker/core/GPU sizing math |
 
 Product surface: [`PRODUCT.md`](PRODUCT.md). Extract / ground / eval: [`EXTRACTION.md`](EXTRACTION.md).
 

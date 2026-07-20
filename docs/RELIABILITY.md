@@ -2,7 +2,7 @@
 
 Failure handling, durability, dashboard read path, warehouse, and on-call for the Invoice Extraction product.
 
-Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
+Hub: [`SYSTEM.md`](SYSTEM.md). Sizing: [`CAPACITY.md`](CAPACITY.md) · [`SIZING.md`](SIZING.md). Product / extract: [`PRODUCT.md`](PRODUCT.md) · [`EXTRACTION.md`](EXTRACTION.md).
 
 ---
 

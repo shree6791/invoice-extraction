@@ -2,7 +2,7 @@
 
 How **Parse → Extract → Ground → Chat** works, how we score it, and how the model stack evolves.
 
-Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md).
+Product framing: [`PRODUCT.md`](PRODUCT.md). Fleet: [`SYSTEM.md`](SYSTEM.md) · [`CAPACITY.md`](CAPACITY.md) · [`RELIABILITY.md`](RELIABILITY.md) · [`SIZING.md`](SIZING.md).
 
 ---
 
