@@ -81,7 +81,7 @@ P99 target: 15 s, broken into hops:
 
 | Stage | Type | Time | Notes |
 |---|---|---|---|
-| Ingress → Kafka | enqueue | < 50 ms | token bucket + dedup (Redis ETag) |
+| Ingestion → Kafka | enqueue | < 50 ms | token bucket + dedup (Redis ETag) |
 | Kafka → Parse pod | queue lag | < 100 ms steady | per-tenant partition fairness |
 | Parse (PyMuPDF) | compute | ~200–500 ms | CPU-bound, page-parallel |
 | Parse → Extract queue | hop | < 100 ms | independent HPA per stage |
@@ -102,7 +102,7 @@ P99 target: 15 s, broken into hops:
 
 ```mermaid
 flowchart LR
-  subgraph Ingress
+  subgraph Ingestion
     T1[tenant A · high volume]
     T2[tenant B · SMB]
     T3[tenant C · SMB]

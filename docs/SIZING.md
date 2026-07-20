@@ -58,7 +58,7 @@ Self-hosted extract service time is assumed at 1 s/doc (see [`CAPACITY.md` servi
 
 ### Batch size derivation
 
-GPU count depends on batch size, which in turn depends on how much GPU memory is left over once model weights and overhead are subtracted:
+GPU count depends on batch size, which depends on memory left after model weights and overhead:
 
 ```
 usable_memory = GPU_memory − model_weights − overhead
@@ -73,7 +73,7 @@ max_batch = usable_memory / memory_per_request
 | 13B | ~26 GB |
 | 70B | ~140 GB (exceeds one 80GB GPU — needs tensor parallelism) |
 
-**Memory per request (KV cache), Llama-2-7B-class (32 layers, 32 KV heads, head_dim 128, fp16):**
+**Memory per request (KV cache), Llama-2-7B-class (fp16):**
 
 ```
 memory/token = 2 × 32 × 32 × 128 × 2 bytes ≈ 0.5 MB
@@ -85,7 +85,7 @@ memory/token = 2 × 32 × 32 × 128 × 2 bytes ≈ 0.5 MB
 | 4,000 tokens | ~2 GB |
 | 8,000 tokens | ~4 GB |
 
-Sequence length reference: [`CAPACITY.md` per-event size](CAPACITY.md#per-event-size) — ~4 KB parsed markdown/doc, ~1,000 tokens/page by English-text heuristic → ~2,000–3,000 tokens for a 2–3 page invoice. Not yet measured against real tokenizer output.
+Invoice token estimate: [`CAPACITY.md` per-event size](CAPACITY.md#per-event-size) — ~2,000–3,000 tokens for a 2–3 page invoice. Not yet measured against real tokenizer output.
 
 **7B model, 80GB GPU:**
 
@@ -101,19 +101,21 @@ usable_memory = 80 − 14 − 6 (overhead) ≈ 60 GB
 
 ### GPU count by batch size
 
-| Batch size | Avg (46 req/s) | 3× peak (139 req/s) |
+[Conversion rule](#conversion-rules): `GPUs = concurrency ÷ batch_size`. Assumes ~1 forward pass/s per GPU at the 1 s/doc service time — sketch, not measured throughput.
+
+| Batch size | GPUs @ avg (46 req/s) | GPUs @ 3× peak (139 req/s) |
 |---|---|---|
-| 8 (placeholder, likely conservative) | ~6 | ~17 |
-| 30 (7B model, 80GB, ~2GB/req) | ~2 | ~5 |
+| 8 (placeholder, likely conservative) | **~6** | **~17** |
+| 30 (7B model, 80GB, ~2GB/req) | **~2** | **~5** |
 
-Batch size is the single largest lever on GPU fleet size in this calculation.
+**Batch 8:** placeholder from [`CAPACITY.md`](CAPACITY.md#capacity), likely conservative. **Batch 30:** memory max at 2 GB/request (~4,000 tokens); invoices estimated ~2,000–3,000 tokens (~1–1.5 GB/request) — achievable batch may be higher, unverified.
 
-**Not accounted for:** continuous batching / paged attention (vLLM) typically raises effective batch size above this flat estimate; actual GPU (A100 vs H100 vs L4), actual model, actual tokenized invoice length.
+**Not accounted for:** continuous batching / paged attention (vLLM), GPU model (A100/H100/L4), actual tokenized invoice length.
 
-**Resolution path:** run the target model on the target GPU under vLLM, ramp concurrent requests until memory or p99 latency breaks, read off the batch ceiling. Same for Parse's per-doc core assumption and Ingestion's per-instance throughput assumption.
+**Resolution path:** load-test target model on target GPU under vLLM; ramp concurrency until memory or p99 latency breaks.
 
 ---
 
 ## Adapter serving
 
-No separate sizing math — adapters run at the LayoutLM fast-path service time already covered above, not a GPU-batched service time of their own. Full explanation: [`CAPACITY.md` model serving](CAPACITY.md#model-serving--adapter-scaling).
+No separate sizing math — adapters use the LayoutLM fast-path service time in [`CAPACITY.md`](CAPACITY.md#service-time-capacity). See [`model serving`](CAPACITY.md#model-serving--adapter-scaling).
